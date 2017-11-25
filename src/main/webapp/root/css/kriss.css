@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+.nav-md .container.body .col-md-3.left_col{
+	width:150px}
+	
+.nav-md .container.body .right_col{margin-left:150px}
+
+.main_container .top_nav{margin-left:150px}
+footer{margin-left:150px}
