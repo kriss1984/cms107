@@ -14,7 +14,15 @@
     <url-pattern>/article</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>com.kriss.servlet.UserServlet</servlet-class>
+  </servlet>
 
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/user</url-pattern>
+  </servlet-mapping>
 
   <servlet>
     <servlet-name>ConnectorServlet</servlet-name>
@@ -37,12 +45,36 @@
   </servlet-mapping>
 
   <filter>
+    <filter-name>ExceptionFilter</filter-name>
+    <filter-class>com.kriss.filter.ExceptionFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ExceptionFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
     <filter-name>EncodingFilter</filter-name>
-    <filter-class>com.kriss.filter.EcodingFilter</filter-class>
+    <filter-class>com.kriss.filter.EncodingFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>EncodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
+  <filter>
+    <filter-name>SercurityFilter</filter-name>
+    <filter-class>com.kriss.filter.SercurityFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>SercurityFilter</filter-name>
+    <url-pattern>/root/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>SercurityFilter</filter-name>
+    <url-pattern>/user/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>SercurityFilter</filter-name>
+    <url-pattern>/article/*</url-pattern>
+  </filter-mapping>
 </web-app>

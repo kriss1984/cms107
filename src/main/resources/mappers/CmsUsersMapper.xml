@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kriss.cms.mybatis.dao.CmsUsersMapper" >
+  <resultMap id="BaseResultMap" type="com.kriss.cms.mybatis.dto.CmsUsers" >
+    <id column="uuid" property="uuid" jdbcType="VARCHAR" />
+    <result column="log_name" property="logName" jdbcType="VARCHAR" />
+    <result column="log_passwd" property="logPasswd" jdbcType="VARCHAR" />
+    <result column="nick_name" property="nickName" jdbcType="VARCHAR" />
+    <result column="log_ip" property="logIp" jdbcType="VARCHAR" />
+    <result column="log_time" property="logTime" jdbcType="TIMESTAMP" />
+    <result column="user_type" property="userType" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    `uuid`, `log_name`, `log_passwd`, `nick_name`, `log_ip`, `log_time`, `user_type`
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.kriss.cms.mybatis.dto.CmsUsersExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from `cms_users`
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+    <if test="limitStart != null and limitStart>=0" >
+      limit #{limitStart} , #{limitEnd}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from `cms_users`
+    where `uuid` = #{uuid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from `cms_users`
+    where `uuid` = #{uuid,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.kriss.cms.mybatis.dto.CmsUsersExample" >
+    delete from `cms_users`
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.kriss.cms.mybatis.dto.CmsUsers" >
+    insert into `cms_users` (`uuid`, `log_name`, `log_passwd`, 
+      `nick_name`, `log_ip`, `log_time`, 
+      `user_type`)
+    values (#{uuid,jdbcType=VARCHAR}, #{logName,jdbcType=VARCHAR}, #{logPasswd,jdbcType=VARCHAR}, 
+      #{nickName,jdbcType=VARCHAR}, #{logIp,jdbcType=VARCHAR}, #{logTime,jdbcType=TIMESTAMP}, 
+      #{userType,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kriss.cms.mybatis.dto.CmsUsers" >
+    insert into `cms_users`
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        `uuid`,
+      </if>
+      <if test="logName != null" >
+        `log_name`,
+      </if>
+      <if test="logPasswd != null" >
+        `log_passwd`,
+      </if>
+      <if test="nickName != null" >
+        `nick_name`,
+      </if>
+      <if test="logIp != null" >
+        `log_ip`,
+      </if>
+      <if test="logTime != null" >
+        `log_time`,
+      </if>
+      <if test="userType != null" >
+        `user_type`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        #{uuid,jdbcType=VARCHAR},
+      </if>
+      <if test="logName != null" >
+        #{logName,jdbcType=VARCHAR},
+      </if>
+      <if test="logPasswd != null" >
+        #{logPasswd,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName != null" >
+        #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="logIp != null" >
+        #{logIp,jdbcType=VARCHAR},
+      </if>
+      <if test="logTime != null" >
+        #{logTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userType != null" >
+        #{userType,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.kriss.cms.mybatis.dto.CmsUsersExample" resultType="java.lang.Integer" >
+    select count(*) from `cms_users`
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update `cms_users`
+    <set >
+      <if test="record.uuid != null" >
+        `uuid` = #{record.uuid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.logName != null" >
+        `log_name` = #{record.logName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.logPasswd != null" >
+        `log_passwd` = #{record.logPasswd,jdbcType=VARCHAR},
+      </if>
+      <if test="record.nickName != null" >
+        `nick_name` = #{record.nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.logIp != null" >
+        `log_ip` = #{record.logIp,jdbcType=VARCHAR},
+      </if>
+      <if test="record.logTime != null" >
+        `log_time` = #{record.logTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.userType != null" >
+        `user_type` = #{record.userType,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update `cms_users`
+    set `uuid` = #{record.uuid,jdbcType=VARCHAR},
+      `log_name` = #{record.logName,jdbcType=VARCHAR},
+      `log_passwd` = #{record.logPasswd,jdbcType=VARCHAR},
+      `nick_name` = #{record.nickName,jdbcType=VARCHAR},
+      `log_ip` = #{record.logIp,jdbcType=VARCHAR},
+      `log_time` = #{record.logTime,jdbcType=TIMESTAMP},
+      `user_type` = #{record.userType,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kriss.cms.mybatis.dto.CmsUsers" >
+    update `cms_users`
+    <set >
+      <if test="logName != null" >
+        `log_name` = #{logName,jdbcType=VARCHAR},
+      </if>
+      <if test="logPasswd != null" >
+        `log_passwd` = #{logPasswd,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName != null" >
+        `nick_name` = #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="logIp != null" >
+        `log_ip` = #{logIp,jdbcType=VARCHAR},
+      </if>
+      <if test="logTime != null" >
+        `log_time` = #{logTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userType != null" >
+        `user_type` = #{userType,jdbcType=INTEGER},
+      </if>
+    </set>
+    where `uuid` = #{uuid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kriss.cms.mybatis.dto.CmsUsers" >
+    update `cms_users`
+    set `log_name` = #{logName,jdbcType=VARCHAR},
+      `log_passwd` = #{logPasswd,jdbcType=VARCHAR},
+      `nick_name` = #{nickName,jdbcType=VARCHAR},
+      `log_ip` = #{logIp,jdbcType=VARCHAR},
+      `log_time` = #{logTime,jdbcType=TIMESTAMP},
+      `user_type` = #{userType,jdbcType=INTEGER}
+    where `uuid` = #{uuid,jdbcType=VARCHAR}
+  </update>
+</mapper>

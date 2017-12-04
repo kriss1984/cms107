@@ -4,6 +4,7 @@ import com.kriss.cms.mybatis.dto.CmsArticle;
 import com.kriss.cms.service.ArticleService;
 import com.kriss.util.DateUtil;
 import com.kriss.util.IDGenerator;
+import com.kriss.util.Pager;
 import com.kriss.util.PropertiesUtil;
 
 import javax.servlet.ServletException;
@@ -36,6 +37,13 @@ public class ArticleServlet extends HttpServlet {
            String link = staticHtml(cmsArticle);
            cmsArticle.setPath(link);
            System.out.println(link);
+       }else  if("listArticle".equals(m)){
+           String pageNo  = req.getParameter("pageNo");
+           Pager  pager  = new Pager();
+           pager.setPage(Integer.parseInt(pageNo==null?"1":pageNo));
+           articleService.listArticle(pager);
+           req.setAttribute("pager",pager);
+           req.getRequestDispatcher("/root/article_list.jsp").forward(req,resp);
        }
     }
 

@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	  
-    <title>Gentelella Alela! | </title>
+    <title></title>
 
     <!-- Bootstrap -->
    
@@ -22,59 +22,8 @@
   </head>
 
   <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
-        <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
-            <!-- menu profile quick info -->
-            <div class="profile clearfix">
-              <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-              </div>
-              <div class="profile_info">
-                <span>欢迎,</span>
-                <h2>张三</h2>
-              </div>
-            </div>
-            <!-- /menu profile quick info -->
 
-            <br />
-
-            <!-- sidebar menu -->
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-              <div class="menu_section">
-                <h3>主菜单</h3>
-                <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i>文章系统<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu" style="display: block;">
-                    <li><a href="index.html">发表文章</a></li>
-                      <li><a href="index.html">文章列表</a></li>
-                    </ul>
-                  </li>
-     
-                </ul>
-              </div>
-            </div>
-            <!-- /sidebar menu -->
-          </div>
-        </div>
-
-        <!-- top navigation -->
-        <div class="top_nav">
-          <div class="nav_menu">
-            <nav>
-              <ul class="nav navbar-nav navbar-right">
-                <li class="">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" >
-                    <img src="images/img.jpg" alt="">John Doe
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <!-- /top navigation -->
-
+  <jsp:include page="common/body_1.jsp"/>
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
@@ -275,14 +224,7 @@
         </div>
         <!-- /page content -->
 
-        <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-            @copyright <a href="javascript:;">kriss</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
+  <jsp:include page="common/foot_1.jsp" />
       </div>
     </div>
 

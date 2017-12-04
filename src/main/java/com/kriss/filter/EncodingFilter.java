@@ -3,7 +3,7 @@ package com.kriss.filter;
 import javax.servlet.*;
 import java.io.IOException;
 
-public class EcodingFilter implements Filter {
+public class EncodingFilter implements Filter {
 
     public void init(FilterConfig filterConfig) throws ServletException {
 

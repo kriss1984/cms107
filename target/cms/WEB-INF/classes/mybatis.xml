@@ -19,5 +19,6 @@
 
     <mappers>
         <mapper resource="/mappers/CmsArticleMapper.xml"  />
+        <mapper resource="/mappers/CmsUsersMapper.xml"  />
     </mappers>
 </configuration>
