@@ -25,7 +25,7 @@ public class SercurityFilter implements Filter {
         }
 
 
-        if(uri.endsWith("user")&&request.getQueryString()!=null&&request.getQueryString().contains("login")){
+        if(uri.endsWith("user")&&request.getQueryString()!=null&&(request.getQueryString().contains("login")||request.getQueryString().contains("logout"))){
             filterChain.doFilter(request,servletResponse);
             return;
         }

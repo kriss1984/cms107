@@ -28,15 +28,38 @@ public class ArticleDao extends  BaseDao {
         SqlSession  sqlSession  = sqlSessionFactory.openSession();
 
         CmsArticleExample cmsArticleExample   =new CmsArticleExample();
+        cmsArticleExample.setOrderByClause("create_time desc ");
         cmsArticleExample.setLimitStart(pager.getStart());
         cmsArticleExample.setLimitEnd(pager.getPageSize());
 
         CmsArticleMapper cmsArticleMapper  =   sqlSession.getMapper(CmsArticleMapper.class);
         result =  cmsArticleMapper.selectByExample(cmsArticleExample);
-       int total  =  cmsArticleMapper.countByExample(cmsArticleExample);
+        int total  =  cmsArticleMapper.countByExample(cmsArticleExample);
         pager.setRows(result);
-        pager.setTotal(total);
+        pager.setRecords(total);
         sqlSession.commit();
         sqlSession.close();
     }
+
+    public void updateClickCntByLink(String link){
+        CmsArticle  result  = new CmsArticle();
+        SqlSessionFactory  sqlSessionFactory  = getSession();
+        SqlSession  sqlSession  = sqlSessionFactory.openSession();
+
+        CmsArticleExample cmsArticleExample   =new CmsArticleExample();
+        CmsArticleExample.Criteria  cmsArticleCriteria = cmsArticleExample.createCriteria();
+        cmsArticleCriteria.andPathLike("%"+link+"%");
+
+        CmsArticleMapper cmsArticleMapper  =   sqlSession.getMapper(CmsArticleMapper.class);
+        List articles =  cmsArticleMapper.selectByExample(cmsArticleExample);
+        if(articles!=null&&articles.size()>0){
+            result =(CmsArticle)articles.get(0);
+            result.setClickCnt(result.getClickCnt()+1);
+            cmsArticleMapper.updateByPrimaryKey(result);
+        }
+        sqlSession.commit();
+        sqlSession.close();
+
+    }
+
 }

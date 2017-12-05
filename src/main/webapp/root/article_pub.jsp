@@ -52,6 +52,13 @@
                         </div>
                       </div>
                       <div class="form-group">
+                        <label class="control-label col-md-2 col-sm-2 col-xs-12" >关键词 <span class="required">*</span>
+                        </label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                          <input type="text" required class="form-control col-md-7 col-xs-12" name="keyWords">
+                        </div>
+                      </div>
+                      <div class="form-group">
                         <label class="control-label col-md-2 col-sm-2 col-xs-12" >内容 <span class="required">*</span>
                         </label>
                          <div class="col-md-8 col-sm-8 col-xs-12">

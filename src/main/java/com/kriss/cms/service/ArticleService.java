@@ -15,4 +15,9 @@ public class ArticleService {
         ArticleDao articleDao   = new ArticleDao();
         articleDao.listArticle(pager);
     }
+
+    public void updateClickCntByLink(String  link){
+        ArticleDao articleDao   = new ArticleDao();
+        articleDao.updateClickCntByLink(link);
+    }
 }

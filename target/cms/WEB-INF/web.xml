@@ -77,4 +77,12 @@
     <filter-name>SercurityFilter</filter-name>
     <url-pattern>/article/*</url-pattern>
   </filter-mapping>
+  <filter>
+    <filter-name>HtmlFilter</filter-name>
+    <filter-class>com.kriss.filter.ArticleFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>HtmlFilter</filter-name>
+    <url-pattern>/articles/*</url-pattern>
+  </filter-mapping>
 </web-app>

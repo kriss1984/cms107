@@ -7,7 +7,7 @@
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
                     <div class="profile_pic">
-                        <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                        <img src="/root/images/img.jpg" alt="..." class="img-circle profile_img">
                     </div>
                     <div class="profile_info">
                         <span>欢迎,</span>
@@ -26,7 +26,7 @@
                             <li><a><i class="fa fa-home"></i>文章系统<span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu" style="display: block;">
                                     <li><a href="/root/article_pub.jsp">发表文章</a></li>
-                                    <li><a href="/root/article_list.jsp">文章列表</a></li>
+                                    <li><a href="/article?m=listArticle">文章列表</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -43,7 +43,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
                             <a href="/user?m=logout" class="user-profile dropdown-toggle" >
-                                <img src="images/img.jpg" alt="">退出
+                                <img src="/root/images/img.jpg" alt="">退出
                             </a>
                         </li>
                     </ul>
