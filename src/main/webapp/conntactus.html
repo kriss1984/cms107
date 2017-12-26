@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="装修找阿亮,装修后如何除甲醛,装修全包好还是半包好,装修,建材,地板,水电,装修公司,瓷砖,卫浴,油漆" />
+    <meta name="description" content=装修找阿亮-阿亮-浙江私家车第一光广播著名主持人，拥有10多年装修经验，诚实做人，专业做事，终身保修，生活不分大小，用环保材料，为您装修是我们的前提。你所在意的，就是我所关注的" />
+    <title>装修找阿亮</title>
+    <link href="/root/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/root/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/root/css/custom.min.css" rel="stylesheet">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+
+    <style>
+        footer{margin-left:0px}
+
+        .map {
+            width: 640px;
+            height: 450px;
+            margin-bottom: 40px;
+        }
+
+    </style>
+</head>
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+
+        <div class="" role="main">
+            <div class="">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2><img src="/images/logo.png" height="40"/>私家车第一广播</h2>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="x_content" style="min-height:900px;padding:0 10%">
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                    <h1>联系我们</h1>
+                                    <hr  />
+                                    <div id="mainb" >
+
+
+                                        <div id="dituContent" class="map"></div>
+
+                                        <div class="address">
+                                            <ul>
+                                                <li>k
+                                                    <span>地址：浙江省莫干山路111号</span></p><p><span>电话：0571-88077050</span></p><p><span>邮编：310005</span></p><p><span>听众信箱：tingzhong@zrtg.com</span></p><p><span>观众信箱：guanzhong@zrtg.com</span></p><p><span>员工信箱：yuangong@zrtg.com</span></p><p><span>网址：http://www.zrtg.com/</span>                            </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 col-sm-3 col-xs-12">
+                                    <section class="panel">
+                                        <div class="x_title">
+                                            <h2>分享</h2>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <h3 class="green"><i class="fa fa-paint-brush"></i>如果感兴趣，您可以分享到</h3>
+                                            <div class="jiathis_style_32x32" style="margin-top:30px">
+                                                <a class="jiathis_button_qzone"></a>
+                                                <a class="jiathis_button_tsina"></a>
+                                                <a class="jiathis_button_tqq"></a>
+                                                <a class="jiathis_button_weixin"></a>
+                                                <a class="jiathis_button_renren"></a>
+                                                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+                                                <a class="jiathis_counter_style"></a>
+                                            </div>
+                                            <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+                                            <br />
+                                        </div>
+
+                                    </section>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="pull-center">
+                <center> <a href="javascript:;" title="107私家车广播电台">107私家车广播电台</a>&copy;2018 </center>
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+    </div>
+</div>
+
+<script src="/root/js/jquery.min.js"></script>
+<script src="/root/js/bootstrap.min.js"></script>
+<script src="/root/js/custom.min.js"></script>
+
+
+    <script type="text/javascript">
+        //创建和初始化地图函数：
+        function initMap(){
+            createMap();//创建地图
+            setMapEvent();//设置地图事件
+            addMapControl();//向地图添加控件
+            addMarker();//向地图中添加marker
+        }
+
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(120.158886,30.28078);//定义一个中心点坐标
+        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+        var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+        map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+        var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+        map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+        var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+        map.addControl(ctrl_sca);
+    }
+
+    //标注点数组
+    var markerArr = [{title:"浙江广播电视集团",content:"我的备注",point:"120.159672|30.280827",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+    ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+            var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+            var iw = createInfoWindow(i);
+            var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+            marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                borderColor:"#808080",
+                color:"#333",
+                cursor:"pointer"
+            });
+
+            (function(){
+                var index = i;
+                var _iw = createInfoWindow(i);
+                var _marker = marker;
+                _marker.addEventListener("click",function(){
+                    this.openInfoWindow(_iw);
+                });
+                _iw.addEventListener("open",function(){
+                    _marker.getLabel().hide();
+                })
+                _iw.addEventListener("close",function(){
+                    _marker.getLabel().show();
+                })
+                label.addEventListener("click",function(){
+                    _marker.openInfoWindow(_iw);
+                })
+                if(!!json.isOpen){
+                    label.hide();
+                    _marker.openInfoWindow(_iw);
+                }
+            })()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+
+    initMap();//创建和初始化地图
+</script>
+
+</body>
+</html>

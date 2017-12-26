@@ -41,6 +41,10 @@ public class UserServlet extends HttpServlet {
            req.getSession().invalidate();
            resp.sendRedirect("/login/x.jsp");
        }
+       else if("test".equals(m)){
+           System.out.println( req.getParameter("name"));
+           System.out.println( req.getParameter("phone"));
+       }
     }
 
 }
