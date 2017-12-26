@@ -6,7 +6,7 @@ public class StringUtil {
         boolean flag  = false;
         if(str==null)
             flag = true;
-        if(str.trim().length()==0)
+        else if(str.trim().length()==0)
             flag =  true;
         return flag;
     }

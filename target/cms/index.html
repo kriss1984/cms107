@@ -116,14 +116,14 @@
 			<h3 id="regist" style="padding-top:40px;padding-bottom:40px;color:white">我要装修-报名机会抢占通道</h3>
 			<div class="services-grids" style="background-image:url(images/head_bg.jpg);padding:20px 10px" >
 				
-                <form class="layui-form" action="http://site.wsyvip.com/plugins/yuyue3/ajax_2.php?action=SubmitBook&id=432&sid=294" id="registForm" method="post">
+                <form class="layui-form" action="http://192.168.3.163:8080/biz?m=reg" id="registForm" method="post">
 				
 				    <div class="row">
 						<div class="col-md-6">
 							  <div class="layui-form-item">
 								<label class="layui-form-label">姓名<font color="red">*</font></label>
 								<div class="layui-input-block">
-								  <input type="text" name="name"  placeholder="请输入姓名"  class="layui-input required">
+								  <input type="text" name="regName"  placeholder="请输入姓名"  class="layui-input required">
 								</div>
                              </div>
                        </div>
@@ -132,7 +132,7 @@
 							    <div class="layui-form-item">
 								<label class="layui-form-label">联系方法<font color="red">*</font></label>
 								<div class="layui-input-block">
-								   <input type="text" name="phone"  placeholder="请输入联系方法"  class="layui-input required">
+								   <input type="text" name="regPhone"  placeholder="请输入联系方法"  class="layui-input required">
 								</div>
 							  </div>
 						</div>
@@ -144,7 +144,7 @@
 							 <div class="layui-form-item layui-form-text">
 								<label class="layui-form-label">意向建材品牌</label>
 								<div class="layui-input-block">
-								  <textarea name="what" placeholder="意向建材品牌（如地板、卫浴、瓷砖等）" class="layui-textarea"></textarea>
+								  <textarea name="jiancai" placeholder="意向建材品牌（如地板、卫浴、瓷砖等）" class="layui-textarea"></textarea>
 								</div>
 							  </div>
                        </div>
@@ -153,7 +153,7 @@
 							     <div class="layui-form-item layui-form-text">
 									<label class="layui-form-label">意向家电品牌</label>
 									<div class="layui-input-block">
-									  <textarea name="what" placeholder="意向家电品牌（如空调、灶具、电视机等）" class="layui-textarea"></textarea>
+									  <textarea name="jiadian" placeholder="意向家电品牌（如空调、灶具、电视机等）" class="layui-textarea"></textarea>
 									</div>
 								  </div>
 						</div>
@@ -166,7 +166,7 @@
 							  <div class="layui-form-item">
 								<label class="layui-form-label">意向装修公司</label>
 									<div class="layui-input-block">
-										 <input type="text" name="hope" placeholder="请输入意向装修公司"  class="layui-input">
+										 <input type="text" name="zhuangxiugs" placeholder="请输入意向装修公司"  class="layui-input">
 									</div>
                              </div>
 						</div>
@@ -174,7 +174,7 @@
 							  <div class="layui-form-item layui-form-text">
 								<label class="layui-form-label">是否需要检测治理</label>
 								<div class="layui-input-block">
-								  <textarea name="others" placeholder="如除甲醛、苯等空气治理" class="layui-textarea"></textarea>
+								  <textarea name="jiaquanjc" placeholder="如除甲醛、苯等空气治理" class="layui-textarea"></textarea>
 								</div>
 							  </div>
 						</div>
@@ -203,26 +203,23 @@
 							});
 							
 							
-						if(flag){
-							return;
+							if(flag){
+								return false;
+								}
+
+
+
+							$("#registForm").ajaxSubmit({
+								dataType:"json",
+								success:function(da){
+                                    layui.use(['form','layer'], function () {
+                                        layer.msg("提交成功！");
+                                    });
+								}
+							});
+							return false;
+
 							}
-						 layui.use(['form','layer'], function () {
-							layer.msg("提交成功！");
-						 });
-						
-						    
-						$("#registForm").ajaxSubmit({
-							type:"post",
-							dataType:"jsonp",
-							jsonp: "callback",
-							jsonpCallback:"dealResult",
-							success:function(da){
-								
-							}
-						});
-						return false;
-							
-						}
 						
 						
 						</script>

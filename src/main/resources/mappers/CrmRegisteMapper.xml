@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kriss.cms.mybatis.dao.CrmRegisteMapper" >
+  <resultMap id="BaseResultMap" type="com.kriss.cms.mybatis.dto.CrmRegiste" >
+    <result column="uuid" property="uuid" jdbcType="VARCHAR" />
+    <result column="reg_name" property="regName" jdbcType="VARCHAR" />
+    <result column="reg_phone" property="regPhone" jdbcType="VARCHAR" />
+    <result column="jiancai" property="jiancai" jdbcType="VARCHAR" />
+    <result column="jiadian" property="jiadian" jdbcType="VARCHAR" />
+    <result column="zhuangxiugs" property="zhuangxiugs" jdbcType="VARCHAR" />
+    <result column="jiaquanjc" property="jiaquanjc" jdbcType="VARCHAR" />
+    <result column="reg_time" property="regTime" jdbcType="TIMESTAMP" />
+    <result column="reg_source" property="regSource" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    `uuid`, `reg_name`, `reg_phone`, `jiancai`, `jiadian`, `zhuangxiugs`, `jiaquanjc`, 
+    `reg_time`, `reg_source`
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.kriss.cms.mybatis.dto.CrmRegisteExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from `crm_registe`
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+    <if test="limitStart != null and limitStart>=0" >
+      limit #{limitStart} , #{limitEnd}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.kriss.cms.mybatis.dto.CrmRegisteExample" >
+    delete from `crm_registe`
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.kriss.cms.mybatis.dto.CrmRegiste" >
+    insert into `crm_registe` (`uuid`, `reg_name`, `reg_phone`, 
+      `jiancai`, `jiadian`, `zhuangxiugs`, 
+      `jiaquanjc`, `reg_time`, `reg_source`
+      )
+    values (#{uuid,jdbcType=VARCHAR}, #{regName,jdbcType=VARCHAR}, #{regPhone,jdbcType=VARCHAR}, 
+      #{jiancai,jdbcType=VARCHAR}, #{jiadian,jdbcType=VARCHAR}, #{zhuangxiugs,jdbcType=VARCHAR}, 
+      #{jiaquanjc,jdbcType=VARCHAR}, #{regTime,jdbcType=TIMESTAMP}, #{regSource,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.kriss.cms.mybatis.dto.CrmRegiste" >
+    insert into `crm_registe`
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        `uuid`,
+      </if>
+      <if test="regName != null" >
+        `reg_name`,
+      </if>
+      <if test="regPhone != null" >
+        `reg_phone`,
+      </if>
+      <if test="jiancai != null" >
+        `jiancai`,
+      </if>
+      <if test="jiadian != null" >
+        `jiadian`,
+      </if>
+      <if test="zhuangxiugs != null" >
+        `zhuangxiugs`,
+      </if>
+      <if test="jiaquanjc != null" >
+        `jiaquanjc`,
+      </if>
+      <if test="regTime != null" >
+        `reg_time`,
+      </if>
+      <if test="regSource != null" >
+        `reg_source`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        #{uuid,jdbcType=VARCHAR},
+      </if>
+      <if test="regName != null" >
+        #{regName,jdbcType=VARCHAR},
+      </if>
+      <if test="regPhone != null" >
+        #{regPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="jiancai != null" >
+        #{jiancai,jdbcType=VARCHAR},
+      </if>
+      <if test="jiadian != null" >
+        #{jiadian,jdbcType=VARCHAR},
+      </if>
+      <if test="zhuangxiugs != null" >
+        #{zhuangxiugs,jdbcType=VARCHAR},
+      </if>
+      <if test="jiaquanjc != null" >
+        #{jiaquanjc,jdbcType=VARCHAR},
+      </if>
+      <if test="regTime != null" >
+        #{regTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="regSource != null" >
+        #{regSource,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.kriss.cms.mybatis.dto.CrmRegisteExample" resultType="java.lang.Integer" >
+    select count(*) from `crm_registe`
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update `crm_registe`
+    <set >
+      <if test="record.uuid != null" >
+        `uuid` = #{record.uuid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.regName != null" >
+        `reg_name` = #{record.regName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.regPhone != null" >
+        `reg_phone` = #{record.regPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.jiancai != null" >
+        `jiancai` = #{record.jiancai,jdbcType=VARCHAR},
+      </if>
+      <if test="record.jiadian != null" >
+        `jiadian` = #{record.jiadian,jdbcType=VARCHAR},
+      </if>
+      <if test="record.zhuangxiugs != null" >
+        `zhuangxiugs` = #{record.zhuangxiugs,jdbcType=VARCHAR},
+      </if>
+      <if test="record.jiaquanjc != null" >
+        `jiaquanjc` = #{record.jiaquanjc,jdbcType=VARCHAR},
+      </if>
+      <if test="record.regTime != null" >
+        `reg_time` = #{record.regTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.regSource != null" >
+        `reg_source` = #{record.regSource,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update `crm_registe`
+    set `uuid` = #{record.uuid,jdbcType=VARCHAR},
+      `reg_name` = #{record.regName,jdbcType=VARCHAR},
+      `reg_phone` = #{record.regPhone,jdbcType=VARCHAR},
+      `jiancai` = #{record.jiancai,jdbcType=VARCHAR},
+      `jiadian` = #{record.jiadian,jdbcType=VARCHAR},
+      `zhuangxiugs` = #{record.zhuangxiugs,jdbcType=VARCHAR},
+      `jiaquanjc` = #{record.jiaquanjc,jdbcType=VARCHAR},
+      `reg_time` = #{record.regTime,jdbcType=TIMESTAMP},
+      `reg_source` = #{record.regSource,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

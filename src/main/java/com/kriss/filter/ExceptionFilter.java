@@ -30,7 +30,8 @@ public class ExceptionFilter implements Filter {
                     return;
                 }
             }
-            servletResponse.getWriter().write("服务器忙，请稍后再试");
+            servletResponse.getWriter().write("服务器忙，请稍后再试:"+e.getMessage());
+            e.printStackTrace();
         }
     }
 
