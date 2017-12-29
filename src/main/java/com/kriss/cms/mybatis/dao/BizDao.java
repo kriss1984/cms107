@@ -11,6 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class BizDao extends  BaseDao {
 
@@ -39,8 +40,19 @@ public class BizDao extends  BaseDao {
         int total  =  crmRegisteMapper.countByExample(crmRegisteExample);
         pager.setRows(result);
         pager.setRecords(total);
-        sqlSession.commit();
         sqlSession.close();
+    }
+
+
+    public List listRegsByMap(Map condition){
+        SqlSessionFactory  sqlSessionFactory  = getSession();
+        SqlSession  sqlSession  = sqlSessionFactory.openSession();
+        CrmRegisteExample crmRegisteExample   =new CrmRegisteExample();
+        crmRegisteExample.setOrderByClause("reg_time desc ");
+
+        CrmRegisteMapper crmRegisteMapper  =   sqlSession.getMapper(CrmRegisteMapper.class);
+        return   crmRegisteMapper.selectByExample(crmRegisteExample);
+
     }
 
 

@@ -5,16 +5,22 @@ import com.kriss.cms.mybatis.dto.CrmRegiste;
 import com.kriss.cms.service.BizService;
 import com.kriss.cms.service.UserService;
 import com.kriss.exceptions.BizException;
+import com.kriss.util.DateUtil;
 import com.kriss.util.HttpUtil;
 import com.kriss.util.Pager;
 import com.kriss.util.StringUtil;
+import org.jxls.common.Context;
+import org.jxls.util.JxlsHelper;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import java.io.*;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class BizServlet extends HttpServlet {
 
@@ -48,7 +54,54 @@ public class BizServlet extends HttpServlet {
            bizService.listRegs(pager);
            req.setAttribute("pager",pager);
            req.getRequestDispatcher("/root/reg_list.jsp").forward(req,resp);
+       }else if("export".equals(m)){
+           Map condition  = new HashMap();
+           List data  = bizService.listRegsByMap(condition);
+           String appPath   = this.getServletContext().getRealPath("/");
+           try{
+               InputStream is = new FileInputStream(appPath+"/root/regTemps.xlsx");
+               OutputStream os = new FileOutputStream(appPath+"/root/object_collection_output.xlsx");
+               Context context = new Context();
+               context.putVar("regs", data);
+               JxlsHelper.getInstance().processTemplate(is, os, context);
+               is.close();
+               os.flush();
+               os.close();
+               download(appPath+"/root/object_collection_output.xlsx",resp);
+           }catch (Exception e){
+               e.printStackTrace();
+           }
        }
+    }
+
+    private void download(String fileName,HttpServletResponse response){
+        response.setContentType("application/download");
+        try {
+            String attachName  = java.net.URLEncoder.encode("报名数据","UTF-8");
+
+            response.setHeader("Content-Disposition", "attachment;filename="+attachName+"_"+ DateUtil.getDateString(new Date(),"yyyyMMddHHmm")+".xlsx");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        FileInputStream  fis  = null;
+        try {
+              fis  = new FileInputStream(fileName);
+            byte datas[] = new byte[1024];
+            int readed  = 0;
+            while((readed =  fis.read(datas))>0){
+                response.getOutputStream().write(datas,0,readed);
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            fis.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private String alalySource(HttpServletRequest request){
@@ -59,4 +112,7 @@ public class BizServlet extends HttpServlet {
            return "浏览器";
         }
     }
+
+
+
 }
