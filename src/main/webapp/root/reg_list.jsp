@@ -34,6 +34,23 @@
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>报名管理 </h2>
+                      <div class="ibox-tools">
+                          <a class="collapse-link">
+                              <i class="fa fa-chevron-up"></i>
+                          </a>
+                          <a class="dropdown-toggle" data-toggle="dropdown" href="table_basic.html#">
+                              <i class="fa fa-wrench"></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-user">
+                              <li><a href="table_basic.html#">选项1</a>
+                              </li>
+                              <li><a href="table_basic.html#">选项2</a>
+                              </li>
+                          </ul>
+                          <a class="close-link">
+                              <i class="fa fa-times"></i>
+                          </a>
+                      </div>
                     <div class="clearfix"></div>
                   </div>
 
@@ -82,7 +99,6 @@
 
                         </tbody>
                       </table>
-
                       ${pager.bootstrapPager}
                     </div>
 
@@ -113,15 +129,15 @@
         if ("${pager.page}" == "1") {
             return;
         }
-        location.href="/article?m=listArticle&pageNo="+"${pager.page-1}";
+        location.href="/biz?m=regList&pageNo="+"${pager.page-1}";
     }
     function nextPage() {
         if ("${pager.total}" ==${pager.page}) {
             return;
         }
-        location.href="/article?m=listArticle&pageNo="+"${pager.page+1}";
+        location.href="/biz?m=regList&pageNo="+"${pager.page+1}";
     }
     function goPage(page) {
-        location.href="/article?m=listArticle&pageNo="+page;
+        location.href="/biz?m=regList&pageNo="+page;
     }
 </script>

@@ -21,7 +21,7 @@ public class Pager {
     private String sord;//  排序规则   asc   desc
 
 
-    private int pageSize = 15;//每页显示数
+    private int pageSize = 10;//每页显示数
     private int start;//mysql 中从何位置开始查
     private long timeUsed; //查询用时
 

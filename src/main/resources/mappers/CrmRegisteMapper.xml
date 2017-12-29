@@ -11,6 +11,7 @@
     <result column="jiaquanjc" property="jiaquanjc" jdbcType="VARCHAR" />
     <result column="reg_time" property="regTime" jdbcType="TIMESTAMP" />
     <result column="reg_source" property="regSource" jdbcType="VARCHAR" />
+    <result column="req_ip" property="reqIp" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -72,7 +73,7 @@
   </sql>
   <sql id="Base_Column_List" >
     `uuid`, `reg_name`, `reg_phone`, `jiancai`, `jiadian`, `zhuangxiugs`, `jiaquanjc`, 
-    `reg_time`, `reg_source`
+    `reg_time`, `reg_source`, `req_ip`
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.kriss.cms.mybatis.dto.CrmRegisteExample" >
     select
@@ -100,12 +101,12 @@
   <insert id="insert" parameterType="com.kriss.cms.mybatis.dto.CrmRegiste" >
     insert into `crm_registe` (`uuid`, `reg_name`, `reg_phone`, 
       `jiancai`, `jiadian`, `zhuangxiugs`, 
-      `jiaquanjc`, `reg_time`, `reg_source`
-      )
+      `jiaquanjc`, `reg_time`, `reg_source`, 
+      `req_ip`)
     values (#{uuid,jdbcType=VARCHAR}, #{regName,jdbcType=VARCHAR}, #{regPhone,jdbcType=VARCHAR}, 
       #{jiancai,jdbcType=VARCHAR}, #{jiadian,jdbcType=VARCHAR}, #{zhuangxiugs,jdbcType=VARCHAR}, 
-      #{jiaquanjc,jdbcType=VARCHAR}, #{regTime,jdbcType=TIMESTAMP}, #{regSource,jdbcType=VARCHAR}
-      )
+      #{jiaquanjc,jdbcType=VARCHAR}, #{regTime,jdbcType=TIMESTAMP}, #{regSource,jdbcType=VARCHAR}, 
+      #{reqIp,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.kriss.cms.mybatis.dto.CrmRegiste" >
     insert into `crm_registe`
@@ -137,6 +138,9 @@
       <if test="regSource != null" >
         `reg_source`,
       </if>
+      <if test="reqIp != null" >
+        `req_ip`,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="uuid != null" >
@@ -165,6 +169,9 @@
       </if>
       <if test="regSource != null" >
         #{regSource,jdbcType=VARCHAR},
+      </if>
+      <if test="reqIp != null" >
+        #{reqIp,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -204,6 +211,9 @@
       <if test="record.regSource != null" >
         `reg_source` = #{record.regSource,jdbcType=VARCHAR},
       </if>
+      <if test="record.reqIp != null" >
+        `req_ip` = #{record.reqIp,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -219,7 +229,8 @@
       `zhuangxiugs` = #{record.zhuangxiugs,jdbcType=VARCHAR},
       `jiaquanjc` = #{record.jiaquanjc,jdbcType=VARCHAR},
       `reg_time` = #{record.regTime,jdbcType=TIMESTAMP},
-      `reg_source` = #{record.regSource,jdbcType=VARCHAR}
+      `reg_source` = #{record.regSource,jdbcType=VARCHAR},
+      `req_ip` = #{record.reqIp,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>

@@ -1,11 +1,12 @@
 package com.kriss.cms.mybatis.dao;
 
-import java.util.List;
-import org.apache.ibatis.annotations.Param;
 import com.kriss.cms.mybatis.dto.CrmRegiste;
 import com.kriss.cms.mybatis.dto.CrmRegisteExample;
+import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 public interface CrmRegisteMapper {
+
     int countByExample(CrmRegisteExample example);
 
     int deleteByExample(CrmRegisteExample example);

@@ -15,19 +15,20 @@ public class CrmRegiste {
 
     private String zhuangxiugs;
 
-    private Boolean jiaquanjc;
+    private String jiaquanjc;
 
     private Date regTime;
 
     private String regSource;
 
-
-    public CrmRegiste(){}
+    private String reqIp;
 
     public CrmRegiste(String regName, String regPhone) {
         this.regName = regName;
         this.regPhone = regPhone;
     }
+
+    public CrmRegiste(){}
 
     public String getUuid() {
         return uuid;
@@ -77,12 +78,12 @@ public class CrmRegiste {
         this.zhuangxiugs = zhuangxiugs == null ? null : zhuangxiugs.trim();
     }
 
-    public Boolean getJiaquanjc() {
+    public String getJiaquanjc() {
         return jiaquanjc;
     }
 
-    public void setJiaquanjc(Boolean jiaquanjc) {
-        this.jiaquanjc = jiaquanjc;
+    public void setJiaquanjc(String jiaquanjc) {
+        this.jiaquanjc = jiaquanjc == null ? null : jiaquanjc.trim();
     }
 
     public Date getRegTime() {
@@ -99,5 +100,13 @@ public class CrmRegiste {
 
     public void setRegSource(String regSource) {
         this.regSource = regSource == null ? null : regSource.trim();
+    }
+
+    public String getReqIp() {
+        return reqIp;
+    }
+
+    public void setReqIp(String reqIp) {
+        this.reqIp = reqIp == null ? null : reqIp.trim();
     }
 }

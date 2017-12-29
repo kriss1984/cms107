@@ -79,12 +79,12 @@
     <filter-name>SercurityFilter</filter-name>
     <url-pattern>/root/*</url-pattern>
   </filter-mapping>
-  <!--
+
   <filter-mapping>
     <filter-name>SercurityFilter</filter-name>
     <url-pattern>/user/*</url-pattern>
   </filter-mapping>
-  -->
+
   <filter-mapping>
     <filter-name>SercurityFilter</filter-name>
     <url-pattern>/article/*</url-pattern>

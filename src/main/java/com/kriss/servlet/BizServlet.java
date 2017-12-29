@@ -5,6 +5,7 @@ import com.kriss.cms.mybatis.dto.CrmRegiste;
 import com.kriss.cms.service.BizService;
 import com.kriss.cms.service.UserService;
 import com.kriss.exceptions.BizException;
+import com.kriss.util.HttpUtil;
 import com.kriss.util.Pager;
 import com.kriss.util.StringUtil;
 
@@ -35,7 +36,8 @@ public class BizServlet extends HttpServlet {
            crmRegiste.setJiadian( req.getParameter("jiadian"));
            crmRegiste.setJiancai( req.getParameter("jiancai"));
            crmRegiste.setZhuangxiugs(req.getParameter("zhuangxiugs"));
-           crmRegiste.setJiaquanjc( "eq".equals(req.getParameter("jiaquanjc"))?true:false);
+           crmRegiste.setJiaquanjc( req.getParameter("jiaquanjc"));
+           crmRegiste.setReqIp(HttpUtil.getIpAddress(req));
            crmRegiste.setRegTime(new Date());
            crmRegiste.setRegSource(alalySource(req));
            bizService.saveReg(crmRegiste);
@@ -48,7 +50,6 @@ public class BizServlet extends HttpServlet {
            req.getRequestDispatcher("/root/reg_list.jsp").forward(req,resp);
        }
     }
-
 
     private String alalySource(HttpServletRequest request){
         String userAgent = request.getHeader("user-agent").toLowerCase();

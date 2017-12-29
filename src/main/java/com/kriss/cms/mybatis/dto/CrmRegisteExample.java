@@ -555,52 +555,62 @@ public class CrmRegisteExample {
             return (Criteria) this;
         }
 
-        public Criteria andJiaquanjcEqualTo(Boolean value) {
+        public Criteria andJiaquanjcEqualTo(String value) {
             addCriterion("`jiaquanjc` =", value, "jiaquanjc");
             return (Criteria) this;
         }
 
-        public Criteria andJiaquanjcNotEqualTo(Boolean value) {
+        public Criteria andJiaquanjcNotEqualTo(String value) {
             addCriterion("`jiaquanjc` <>", value, "jiaquanjc");
             return (Criteria) this;
         }
 
-        public Criteria andJiaquanjcGreaterThan(Boolean value) {
+        public Criteria andJiaquanjcGreaterThan(String value) {
             addCriterion("`jiaquanjc` >", value, "jiaquanjc");
             return (Criteria) this;
         }
 
-        public Criteria andJiaquanjcGreaterThanOrEqualTo(Boolean value) {
+        public Criteria andJiaquanjcGreaterThanOrEqualTo(String value) {
             addCriterion("`jiaquanjc` >=", value, "jiaquanjc");
             return (Criteria) this;
         }
 
-        public Criteria andJiaquanjcLessThan(Boolean value) {
+        public Criteria andJiaquanjcLessThan(String value) {
             addCriterion("`jiaquanjc` <", value, "jiaquanjc");
             return (Criteria) this;
         }
 
-        public Criteria andJiaquanjcLessThanOrEqualTo(Boolean value) {
+        public Criteria andJiaquanjcLessThanOrEqualTo(String value) {
             addCriterion("`jiaquanjc` <=", value, "jiaquanjc");
             return (Criteria) this;
         }
 
-        public Criteria andJiaquanjcIn(List<Boolean> values) {
+        public Criteria andJiaquanjcLike(String value) {
+            addCriterion("`jiaquanjc` like", value, "jiaquanjc");
+            return (Criteria) this;
+        }
+
+        public Criteria andJiaquanjcNotLike(String value) {
+            addCriterion("`jiaquanjc` not like", value, "jiaquanjc");
+            return (Criteria) this;
+        }
+
+        public Criteria andJiaquanjcIn(List<String> values) {
             addCriterion("`jiaquanjc` in", values, "jiaquanjc");
             return (Criteria) this;
         }
 
-        public Criteria andJiaquanjcNotIn(List<Boolean> values) {
+        public Criteria andJiaquanjcNotIn(List<String> values) {
             addCriterion("`jiaquanjc` not in", values, "jiaquanjc");
             return (Criteria) this;
         }
 
-        public Criteria andJiaquanjcBetween(Boolean value1, Boolean value2) {
+        public Criteria andJiaquanjcBetween(String value1, String value2) {
             addCriterion("`jiaquanjc` between", value1, value2, "jiaquanjc");
             return (Criteria) this;
         }
 
-        public Criteria andJiaquanjcNotBetween(Boolean value1, Boolean value2) {
+        public Criteria andJiaquanjcNotBetween(String value1, String value2) {
             addCriterion("`jiaquanjc` not between", value1, value2, "jiaquanjc");
             return (Criteria) this;
         }
@@ -732,6 +742,76 @@ public class CrmRegisteExample {
 
         public Criteria andRegSourceNotBetween(String value1, String value2) {
             addCriterion("`reg_source` not between", value1, value2, "regSource");
+            return (Criteria) this;
+        }
+
+        public Criteria andReqIpIsNull() {
+            addCriterion("`req_ip` is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andReqIpIsNotNull() {
+            addCriterion("`req_ip` is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andReqIpEqualTo(String value) {
+            addCriterion("`req_ip` =", value, "reqIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andReqIpNotEqualTo(String value) {
+            addCriterion("`req_ip` <>", value, "reqIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andReqIpGreaterThan(String value) {
+            addCriterion("`req_ip` >", value, "reqIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andReqIpGreaterThanOrEqualTo(String value) {
+            addCriterion("`req_ip` >=", value, "reqIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andReqIpLessThan(String value) {
+            addCriterion("`req_ip` <", value, "reqIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andReqIpLessThanOrEqualTo(String value) {
+            addCriterion("`req_ip` <=", value, "reqIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andReqIpLike(String value) {
+            addCriterion("`req_ip` like", value, "reqIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andReqIpNotLike(String value) {
+            addCriterion("`req_ip` not like", value, "reqIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andReqIpIn(List<String> values) {
+            addCriterion("`req_ip` in", values, "reqIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andReqIpNotIn(List<String> values) {
+            addCriterion("`req_ip` not in", values, "reqIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andReqIpBetween(String value1, String value2) {
+            addCriterion("`req_ip` between", value1, value2, "reqIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andReqIpNotBetween(String value1, String value2) {
+            addCriterion("`req_ip` not between", value1, value2, "reqIp");
             return (Criteria) this;
         }
     }

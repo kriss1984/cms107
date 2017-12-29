@@ -75,8 +75,8 @@
                 <ul class="nav1">
                     <li ><a href="plugin/player/index.html" style="background-color:#F90">节目回顾</a></li>
                     <li><a href="http://site.wsyvip.com/newslist.php?cid=8756&listid=3&sid=294&weixinname=" style="background-color:#F6C"">活动花絮</a></li>
-                    <li><a href="#regist" style="background-color:#6C0">我要装修</a></li>
-                    <li><a href="#regist" style="background-color:#09C">我要建材</a></li>
+                    <li><a href="#regist" style="background-color:#6C0" onclick="changeTitle('我要装修')">我要装修</a></li>
+                    <li><a href="#regist" style="background-color:#09C" onclick="changeTitle('我要建材')">我要建材</a></li>
                     <li><a href="#hot" style="background-color:#F33" >阿亮爆款</a></li>
                 </ul>	
             </div>
@@ -113,10 +113,10 @@
 	<!--services-->
 	<div class="services" >
 		<div class="container">
-			<h3 id="regist" style="padding-top:40px;padding-bottom:40px;color:white">我要装修-报名机会抢占通道</h3>
+			<h3 id="regist" style="padding-top:40px;padding-bottom:40px;color:white"><tx>我要装修</tx>-报名机会抢占通道</h3>
 			<div class="services-grids" style="background-image:url(images/head_bg.jpg);padding:20px 10px" >
 				
-                <form class="layui-form" action="http://192.168.3.163:8080/biz?m=reg" id="registForm" method="post">
+                <form class="layui-form" action="http://localhost:8080/biz?m=reg" id="registForm" method="post">
 				
 				    <div class="row">
 						<div class="col-md-6">
@@ -207,21 +207,23 @@
 								return false;
 								}
 
-
-
 							$("#registForm").ajaxSubmit({
 								dataType:"json",
+								beforeSend:function(){
+                                    layui.use(['form','layer'], function () {
+                                        layer.msg("請稍後，提交中...");
+                                    });
+								},
 								success:function(da){
                                     layui.use(['form','layer'], function () {
                                         layer.msg("提交成功！");
                                     });
+                                    $("#registForm").trigger("reset");
 								}
 							});
 							return false;
 
 							}
-						
-						
 						</script>
 					<div class="clearfix"> </div>
 			</div>
@@ -275,15 +277,6 @@
 	<!--smooth-scrolling-of-move-up-->
 		<script type="text/javascript">
 									$(document).ready(function() {
-										/*
-										var defaults = {
-								  			containerID: 'toTop', // fading element id
-											containerHoverID: 'toTopHover', // fading element hover id
-											scrollSpeed: 1200,
-											easingType: 'linear' 
-								 		};
-										*/
-										
 										$().UItoTop({ easingType: 'easeOutQuart' });
 										var screenWidth = $("#fullscreen").width();
 										$("#fullscreen").css("height",(screenWidth*0.50)+"px");
@@ -326,5 +319,8 @@ if(IsPC()){
 }else{
 	loadBrands("frags/mobile.html");
 	$("#txt_brief").css({"font-size":"16px"});  
+}
+function  changeTitle(title){
+    $("tx").text(title);
 }
 </SCRIPT>
