@@ -54,7 +54,14 @@ public class BizServlet extends HttpServlet {
            bizService.listRegs(pager);
            req.setAttribute("pager",pager);
            req.getRequestDispatcher("/root/reg_list.jsp").forward(req,resp);
-       }else if("export".equals(m)){
+       } else if("carRegList".equals(m)){
+           String pageNo  = req.getParameter("pageNo");
+           Pager pager  = new Pager();
+           pager.setPage(Integer.parseInt(pageNo==null?"1":pageNo));
+           bizService.listCarRegs(pager);
+           req.setAttribute("pager",pager);
+           req.getRequestDispatcher("/root/car_reg_list.jsp").forward(req,resp);
+       } else if("export".equals(m)){
            Map condition  = new HashMap();
            List data  = bizService.listRegsByMap(condition);
            String appPath   = this.getServletContext().getRealPath("/");

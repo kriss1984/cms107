@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <title>Home</title>
+    <base href="/car/"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
@@ -764,8 +765,10 @@ z-index:1000;
 		function submitForm(){
 			   $("#dataForm").ajaxSubmit({
                 success: function (da) {
-					if(da=="ok")
-                     $("#dataForm").trigger("reset");
+					if(da=="ok"){
+                        $("#dataForm").trigger("reset");
+                        alert("恭喜您已报名成功！");
+                    }
 					else
 					 alert("保存出错");
                 }

@@ -107,4 +107,7 @@
     <filter-name>HtmlFilter</filter-name>
     <url-pattern>/articles/*</url-pattern>
   </filter-mapping>
+  <welcome-file-list>
+    <welcome-file>/car/index.html</welcome-file>
+  </welcome-file-list>
 </web-app>

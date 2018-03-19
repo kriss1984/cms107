@@ -33,7 +33,8 @@
                             -->
                             <li><a><i class="fa fa-home"></i>客户管理<span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu" style="display: block;">
-                                    <li><a href="/biz?m=regList">客户列表</a></li>
+                                    <%--<li><a href="/biz?m=regList">客户列表</a></li>--%>
+                                    <li><a href="/biz?m=carRegList">客户列表</a></li>
                                 </ul>
                             </li>
                         </ul>

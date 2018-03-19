@@ -20,6 +20,12 @@ public class BizService {
         bizDao.listRegs(pager);
     }
 
+    public void listCarRegs(Pager pager) {
+        BizDao bizDao = new BizDao();
+        bizDao.listCarRegs(pager);
+    }
+
+
     public List listRegsByMap(Map condition){
         BizDao bizDao = new BizDao();
         return bizDao.listRegsByMap(condition);

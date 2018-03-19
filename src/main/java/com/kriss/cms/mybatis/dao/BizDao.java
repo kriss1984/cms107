@@ -1,9 +1,6 @@
 package com.kriss.cms.mybatis.dao;
 
-import com.kriss.cms.mybatis.dto.CmsArticle;
-import com.kriss.cms.mybatis.dto.CmsArticleExample;
-import com.kriss.cms.mybatis.dto.CrmRegiste;
-import com.kriss.cms.mybatis.dto.CrmRegisteExample;
+import com.kriss.cms.mybatis.dto.*;
 import com.kriss.util.IDGenerator;
 import com.kriss.util.Pager;
 import org.apache.ibatis.session.SqlSession;
@@ -26,6 +23,7 @@ public class BizDao extends  BaseDao {
         sqlSession.close();
     }
 
+
     public void listRegs(Pager pager) {
         List  result  = new ArrayList();
         SqlSessionFactory  sqlSessionFactory  = getSession();
@@ -42,6 +40,24 @@ public class BizDao extends  BaseDao {
         pager.setRecords(total);
         sqlSession.close();
     }
+
+    public void listCarRegs(Pager pager) {
+        List  result  = new ArrayList();
+        SqlSessionFactory  sqlSessionFactory  = getSession();
+        SqlSession  sqlSession  = sqlSessionFactory.openSession();
+        CarRegistExample carRegisteExample   =new CarRegistExample();
+        carRegisteExample.setOrderByClause("registTime desc ");
+        carRegisteExample.setLimitStart(pager.getStart());
+        carRegisteExample.setLimitEnd(pager.getPageSize());
+
+        CarRegistMapper carRegisteMapper  =   sqlSession.getMapper(CarRegistMapper.class);
+        result =  carRegisteMapper.selectByExample(carRegisteExample);
+        int total  =  carRegisteMapper.countByExample(carRegisteExample);
+        pager.setRows(result);
+        pager.setRecords(total);
+        sqlSession.close();
+    }
+
 
 
     public List listRegsByMap(Map condition){
