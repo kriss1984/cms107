@@ -15,6 +15,16 @@
   </servlet-mapping>
 
   <servlet>
+    <servlet-name>CarBiz</servlet-name>
+    <servlet-class>com.kriss.servlet.TempServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CarBiz</servlet-name>
+    <url-pattern>/car</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
     <servlet-name>UserServlet</servlet-name>
     <servlet-class>com.kriss.servlet.UserServlet</servlet-class>
   </servlet>

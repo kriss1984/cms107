@@ -23,12 +23,14 @@
                     <div class="menu_section">
                         <h3>主菜单</h3>
                         <ul class="nav side-menu">
+                            <!--
                             <li><a><i class="fa fa-home"></i>文章系统<span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu" style="display: block;">
                                     <li><a href="/root/article_pub.jsp">发表文章</a></li>
                                     <li><a href="/article?m=listArticle">文章列表</a></li>
                                 </ul>
                             </li>
+                            -->
                             <li><a><i class="fa fa-home"></i>客户管理<span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu" style="display: block;">
                                     <li><a href="/biz?m=regList">客户列表</a></li>
