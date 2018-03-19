@@ -21,6 +21,6 @@
         <mapper resource="/mappers/CmsArticleMapper.xml"  />
         <mapper resource="/mappers/CmsUsersMapper.xml"  />
         <mapper resource="/mappers/CrmRegisteMapper.xml"  />
-
+        <mapper resource="/mappers/CarRegistMapper.xml"  />
     </mappers>
 </configuration>
