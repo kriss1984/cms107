@@ -1,794 +1,857 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home</title>
-    <base href="/car/"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- Custom Theme files -->
-<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/style.css" type="text/css" rel="stylesheet" media="all">   
-<link href="css/font-awesome.css" rel="stylesheet">	<!-- font-awesome icons -->     
-<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />  <!-- flexslider-CSS -->  
-<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen"> 
-<!-- //Custom Theme files --> 
-<!-- js -->
-<script src="js/jquery-2.2.3.min.js"></script>
+	<title>Home</title>
+	<base href="/car/"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Custom Theme files -->
+	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/font-awesome.css" rel="stylesheet">	<!-- font-awesome icons -->
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />  <!-- flexslider-CSS -->
+	<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen">
+	<!-- //Custom Theme files -->
+	<!-- js -->
+	<script src="js/jquery-2.2.3.min.js"></script>
 	<script src="js/jquery.form.js"></script>
 
-<!-- //js -->
-<!-- web-fonts -->    
-<link href="http://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-<link href="http://fonts.googleapis.com/css?family=Aguafina+Script" rel="stylesheet">
-<link href="http://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
-<!-- //web-fonts -->
+	<!-- //js -->
+	<!-- web-fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Aguafina+Script" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
+	<!-- //web-fonts -->
 
-<style type="text/css">
-     #tab{width:270px; padding:5px;height:150px;margin:20px;}
-       #tab ul{list-style:none; display:;height:30px;line-height:30px; border-bottom:2px #C88 solid;}
-       #tab ul li{background:#FFF;cursor:pointer;float:left;list-style:none height:29px; line-height:29px;padding:0px 10px; margin:0px 10px; border:1px solid #BBB; border-bottom:2px solid #C88;}
-       #tab ul li.on{border-top:2px solid Saddlebrown; border-bottom:2px solid #FFF;}
-       #tab div{height:100px;width:250px; line-height:24px;border-top:none;  padding:1px; border:1px solid #336699;padding:10px;}
-       .hide{display:none;}
+	<style type="text/css">
+		#tab{width:270px; padding:5px;height:150px;margin:20px;}
+		#tab ul{list-style:none; display:;height:30px;line-height:30px; border-bottom:2px #C88 solid;}
+		#tab ul li{background:#FFF;cursor:pointer;float:left;list-style:none height:29px; line-height:29px;padding:0px 10px; margin:0px 10px; border:1px solid #BBB; border-bottom:2px solid #C88;}
+		#tab ul li.on{border-top:2px solid Saddlebrown; border-bottom:2px solid #FFF;}
+		#tab div{height:100px;width:250px; line-height:24px;border-top:none;  padding:1px; border:1px solid #336699;padding:10px;}
+		.hide{display:none;}
 
-	input#button1 {
-		/* General Propertoes */
-		height:40px;
-		width:250px;
-		border:1px solid #858fa6;
-		background:#4a5775;
-		/* CSS3 Styling */
-		background:-moz-linear-gradient(top, #606c88, #3f4c6b);
-		background:-webkit-gradient(linear, left top, left bottom, from(#606c88), to(#3f4c6b));
-		-moz-border-radius:5px;
-		-webkit-border-radius:5px;
-		border-radius:5px;
-		-moz-box-shadow:0px 0px 5px #000;
-		-webkit-box-shadow:0px 0px 5px #000;
-		box-shadow:0px 0px 5px #000;
-		/* Text Styling */
-		font-family:'AirstreamRegular', Georgia, 'Times New Roman', serif;
-		color:#e5edff;
-		text-shadow:0px 0px 5px rgba(0, 0, 0, 0.75);
-		font-size:30px;
-	}
-	/* Pseudo-classes for interactivity */
-	input#button1:hover, input#button1:focus {
-		border-color:#adbad9;
-	}
-	input#button1:active {
-		background:-moz-linear-gradient(bottom, #606c88, #3f4c6b);
-		background:-webkit-gradient(linear, left bottom, left top, from(#606c88), to(#3f4c6b));
-		text-shadow:0px 0px 2px #000;
-	}
-.select{
-  border: solid 1px #D8D8D8;
-  -moz-appearance:none;
-  -webkit-appearance:none;
-  padding-right: 14px;
-  height:40px;
-  width:300px;
-}
-::-webkit-input-placeholder { color:#ADADAD; }
-::-moz-placeholder { color:yellow; } /* firefox 19+ */
-:-ms-input-placeholder { color:yellow; } /* ie */
-input:-moz-placeholder { color:yellow; }
-.navbar-default .navbar-nav > li > a::before {
-    color: red;
-    content: attr(data-hover);
-    position: absolute;
-    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
-    -o-transition: transform 0.3s, opacity 0.3s;
-    -ms-transition: transform 0.3s, opacity 0.3s;
-    transition: transform 0.3s, opacity 0.3s;
-}
-.image-class{
-position:absolute;
-z-index:100;
-background:#BEBEBE;
-width:145px;
-height:30px;
-line-height:30px;
-background:rgba(0,0,0,.4);
-margin-top:35px;
-margin-left:2px;
-font-family: 'Microsoft JhengHei';
-color:#FF6600;
-text-align:center;
-font-weight:bold;
-}
-.myStyle {
- 	margin-top: 100px;
- 	width:100%;
- 	height:700px;
-    background:url(images/1.jpg) no-repeat;
-    background-size:100% 100%;
-}
-.login_from {
-	height:440px;
-	width:360px;
-	float:right;
-	margin-right:520px;
-	background:rgba(0,0,0,.8);
-}
-.image-light:hover{
-	filter:brightness(0.5);
-}
-.image-light-child:hover{
-	filter:brightness(100);
-}
-.div-center{
-z-index:1000;
- position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    margin: auto;
-    }
-</style>
+		input#button1 {
+			/* General Propertoes */
+			height:40px;
+			width:250px;
+			border:1px solid #858fa6;
+			background:#4a5775;
+			/* CSS3 Styling */
+			background:-moz-linear-gradient(top, #606c88, #3f4c6b);
+			background:-webkit-gradient(linear, left top, left bottom, from(#606c88), to(#3f4c6b));
+			-moz-border-radius:5px;
+			-webkit-border-radius:5px;
+			border-radius:5px;
+			-moz-box-shadow:0px 0px 5px #000;
+			-webkit-box-shadow:0px 0px 5px #000;
+			box-shadow:0px 0px 5px #000;
+			/* Text Styling */
+			font-family:'AirstreamRegular', Georgia, 'Times New Roman', serif;
+			color:#e5edff;
+			text-shadow:0px 0px 5px rgba(0, 0, 0, 0.75);
+			font-size:30px;
+		}
+		/* Pseudo-classes for interactivity */
+		input#button1:hover, input#button1:focus {
+			border-color:#adbad9;
+		}
+		input#button1:active {
+			background:-moz-linear-gradient(bottom, #606c88, #3f4c6b);
+			background:-webkit-gradient(linear, left bottom, left top, from(#606c88), to(#3f4c6b));
+			text-shadow:0px 0px 2px #000;
+		}
+		.close-div {
+			/* still bad on picking color */
+			background: orange;
+			color: red;
+			/* make a round button */
+			border-radius: 12px;
+			/* center text */
+			line-height: 20px;
+			text-align: center;
+			height: 20px;
+			width: 20px;
+			font-size: 18px;
+			padding: 1px;
+		}
+		.close-div::before {
+			content: "\2716";
+		}
+		.close-div {
+			top: -10px;
+			right: -10px;
+			position: absolute;
+		}
+
+		input#button2 {
+			/* General Propertoes */
+			height:40px;
+			width:250px;
+			border:1px solid #858fa6;
+			background:#4a5775;
+			/* CSS3 Styling */
+			background:-moz-linear-gradient(top, #606c88, #3f4c6b);
+			background:-webkit-gradient(linear, left top, left bottom, from(#606c88), to(#3f4c6b));
+			-moz-border-radius:5px;
+			-webkit-border-radius:5px;
+			border-radius:5px;
+			-moz-box-shadow:0px 0px 5px #000;
+			-webkit-box-shadow:0px 0px 5px #000;
+			box-shadow:0px 0px 5px #000;
+			/* Text Styling */
+			font-family:'AirstreamRegular', Georgia, 'Times New Roman', serif;
+			color:#e5edff;
+			text-shadow:0px 0px 5px rgba(0, 0, 0, 0.75);
+			font-size:30px;
+		}
+		/* Pseudo-classes for interactivity */
+		input#button2:hover, input#button1:focus {
+			border-color:#adbad9;
+		}
+		input#button2:active {
+			background:-moz-linear-gradient(bottom, #606c88, #3f4c6b);
+			background:-webkit-gradient(linear, left bottom, left top, from(#606c88), to(#3f4c6b));
+			text-shadow:0px 0px 2px #000;
+		}
+		.select{
+			border: solid 1px #D8D8D8;
+			-moz-appearance:none;
+			-webkit-appearance:none;
+			padding-right: 14px;
+			height:40px;
+			width:300px;
+		}
+		::-webkit-input-placeholder { color:#ADADAD; }
+		::-moz-placeholder { color:yellow; } /* firefox 19+ */
+		:-ms-input-placeholder { color:yellow; } /* ie */
+		input:-moz-placeholder { color:yellow; }
+		.navbar-default .navbar-nav > li > a::before {
+			color: red;
+			content: attr(data-hover);
+			position: absolute;
+			-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+			-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+			-o-transition: transform 0.3s, opacity 0.3s;
+			-ms-transition: transform 0.3s, opacity 0.3s;
+			transition: transform 0.3s, opacity 0.3s;
+		}
+		.image-class{
+			position:absolute;
+			z-index:100;
+			background:#BEBEBE;
+			width:145px;
+			height:30px;
+			line-height:30px;
+			background:rgba(0,0,0,.4);
+			margin-top:35px;
+			margin-left:2px;
+			font-family: 'Microsoft JhengHei';
+			color:#FF6600;
+			text-align:center;
+			font-weight:bold;
+		}
+		.myStyle {
+			margin-top: 100px;
+			width:100%;
+			height:700px;
+			background:url(images/1.jpg) no-repeat;
+			background-size:100% 100%;
+		}
+		.login_from {
+			height:440px;
+			width:360px;
+			float:right;
+			margin-right:520px;
+			background:rgba(0,0,0,.8);
+		}
+		.image-light:hover{
+			filter:brightness(0.5);
+		}
+		.image-light-child:hover{
+			filter:brightness(100);
+		}
+		.div-center{
+			z-index:1000;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			margin: auto;
+		}
+	</style>
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" >
-	<!-- banner -->
-	<div id="home" class="w3ls-banner ">
-		<!-- header -->
-		<div class="header-w3layouts"> 
-			<!-- Navigation -->
-			<nav class="navbar navbar-default navbar-fixed-top">
-				<div class="container">
-					<div class="navbar-header page-scroll">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-							<span class="sr-only">Car Trade</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<h1 class="w3lslogo"><a href="index.html">CT <span>Car Trade</span></a></h1>
-					</div> 
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse navbar-ex1-collapse">
-						<ul class="nav navbar-nav navbar-right cl-effect-15">
-							<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-							<li><a class="page-scroll" href="#stats" data-hover="往期回顾">往期回顾</a></li>
-							<li><a class="page-scroll" href="#gallery" data-hover="参展品牌">参展品牌</a></li>
-							<li><a class="page-scroll" href="#blog" data-hover="主播介绍">主播介绍</a></li>
-							<li><a class="page-scroll" href="#lianxi" data-hover="交通指南">交通指南</a></li>
-						</ul>
-					</div>
-					<!-- /.navbar-collapse -->
+<!-- banner -->
+<div id="home" class="w3ls-banner ">
+	<!-- header -->
+	<div class="header-w3layouts">
+		<!-- Navigation -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Car Trade</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<h1 class="w3lslogo"><a href="index.html">CT <span>Car Trade</span></a></h1>
 				</div>
-				<!-- /.container -->
-			</nav>  
-		</div>
-		<div class="myStyle" >
-			<div class="login_from">
-				<div style="background:black; background-size: 100%;margin-top:30px;"><h5 style="font-family: 'Microsoft JhengHei';font-size:40px;text-align:center;color: #FF6600;">火速报名!</h5></div>
-				<div style="margin-left:30px">
-					<form action="/car?m=reg" method="post" id="dataForm">
-						<input type="text" class="name" name="userName" style="height:40px;margin-top:25px;width:300px;background:rgba(0,0,0,0.1);color:yellow;" required="" placeholder="请输入姓名"/>
-						<input type="text" class="phone" name="phone" style="height:40px;width:300px;margin-top:25px;color:yellow;background:rgba(0,0,0,0.1);" required="" placeholder="请输入联系方式"/>
-						<input type="text" class="password" name="carType" style="height:40px;width:300px;margin-top:25px;color:yellow;background:rgba(0,0,0,0.1);" required="" placeholder="请输入意向车型"/>
-						<select class="select" style="margin-top:25px;background:#C0C0C0;" name="zone">
-							<option value ="">请选择参展区域</option>
-							<option value ="下沙龙湖天街"><p style="color:black;">下沙龙湖天街</p></option>
-							<option value="西溪印象城">西溪印象城</option>
-						</select>
-						<div style="width:50px;margin-top:30px;margin-left:30px;"><input type="button" value="马上报名" id="button1" onclick="submitForm()"></div>
-					</form>
-				</div>
-			</div>
-				<!--<div  style="margin-top:165px;float:right;">-->
-				<!--<div id="register" class="login-form agileits-right">-->
-					<!---->
-				<!--</div>-->
-			</div>
-		</div>
-	</div>	
-	<!-- //banner -->
-	</div>
-	<!-- //about --> 
-	<!-- features -->
-	<!-- //features -->
-	<!-- services -->
-	<div class="services jarallax" id="stats">
-		<h3 class="agileits-title" style="margin-left: 40px;">往期回顾<span class="w3lshr-line"> </span></h3>
-		<p style="margin-left: 40px;color: #ffc107;font-family: 'Microsoft JhengHei';text-transform: capitalize;font-size:20px;">私家车107·城市之声，全国首家私家车电台、中国私家车广播领跑者，长期深耕汽车行业。</p>
-		<p style="margin-left: 40px;color: #ffc107;font-family: 'Microsoft JhengHei';text-transform: capitalize;font-size:20px;">自2008年以来，城市之声全面整合社会资源、汽车产业资源、汽车销售及后服务资源、全媒体宣传资源等，</p>
-		<p style="margin-left: 40px;color: #ffc107;font-family: 'Microsoft JhengHei';text-transform: capitalize;font-size:20px;">“107悦车会”车展已累计与数百家汽车经销商合作，服务上<span style="color:red">万</span>名消费者，累计为消费者节省上千万购车款。</p>
-		<div class="container">
-			<div class="w3ls_banner_bottom_grids">
-				<ul class="">
-					<div class="w3_grid_effect">
-						<div class="col-sm-19 col-xs-6 gallry-agile-grids">
-							<div class="view">
-									<img src="images/q1.jpg" alt=""/>
-							</div>
-						</div>
-
-						<div class="col-sm-19 col-xs-6 gallry-agile-grids">
-							<div class="view">
-									<img src="images/q2.jpg" alt=""/>
-							</div>
-						</div>
-						<div class="col-sm-19 col-xs-6 gallry-agile-grids">
-							<div class="view">
-									<img src="images/q4.jpg" alt=""/>
-							</div>
-						</div>
-					</div>
-				</ul>
-				<div class="clearfix"> </div>
-			</div>
-			<div>
-
-			</div>
-		</div>
-	</div>
-	<!-- //services -->
-	<!-- gallery -->
-	<div id="gallery" class="gallery">
-		<div class="container">
-			<h3 class="agileits-title">参展品牌<span class="w3lshr-line"> </span></h3>
-			<div class="main">
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids image-show" style="position:relative;" >
-					<div class="image-class" style="display:none" onclick="openFrom">点击报名</div>
-					<div class="view image-light" style="position:absolute;">
-						<img  src="images/g1.jpg"alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids image-show" style="position:relative;" >
-					<div class="image-class" style="display:none">点击报名</div>
-					<div class="view image-light" style="position:absolute;">
-						<img src="images/g2.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids image-show" style="position:relative;" >
-					<div class="image-class" style="display:none">点击报名</div>
-					<div class="view image-light" style="position:absolute;">
-						<img src="images/g3.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids image-show" style="position:relative;" >
-					<div class="image-class" style="display:none">点击报名</div>
-					<div class="view image-light" style="position:absolute;">
-						<img src="images/g7.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids image-show" style="position:relative;" >
-					<div class="image-class" style="display:none">点击报名</div>
-					<div class="view image-light" style="position:absolute;">
-						<img src="images/g8.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids image-show" style="position:relative;" >
-					<div class="image-class" style="display:none">点击报名</div>
-					<div class="view image-light" style="position:absolute;">
-						<img src="images/g9.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids image-show" style="position:relative;" >
-					<div class="image-class" style="display:none">点击报名</div>
-					<div class="view image-light" style="position:absolute;">
-						<img src="images/q11.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids image-show" style="position:relative;" >
-					<div class="image-class" style="display:none">点击报名</div>
-					<div class="view image-light" style="position:absolute;">
-						<img src="images/q14.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids image-show" style="position:relative;" >
-					<div class="image-class" style="display:none">点击报名</div>
-					<div class="view image-light" style="position:absolute;">
-						<img src="images/a1.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids image-show" style="position:relative;" >
-					<div class="image-class" style="display:none">点击报名</div>
-					<div class="view image-light" style="position:absolute;">
-						<img src="images/a2.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids image-show" style="position:relative;" >
-					<div class="image-class" style="display:none">点击报名</div>
-					<div class="view image-light" style="position:absolute;">
-						<img src="images/a3.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids image-show" style="position:relative;" >
-					<div class="image-class" style="display:none">点击报名</div>
-					<div class="view image-light" style="position:absolute;">
-						<img src="images/a4.jpg" alt=""/>
-					</div>
-				</div>
-
-
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids image-show" style="position:relative;" >
-					<div class="image-class" style="display:none">点击报名</div>
-					<div class="view image-light" style="position:absolute;">
-						<img src="images/a5.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids image-show" style="position:relative;" >
-					<div class="image-class" style="display:none">点击报名</div>
-					<div class="view image-light" style="position:absolute;">
-						<img src="images/a6.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids image-show" style="position:relative;" >
-					<div class="image-class" style="display:none">点击报名</div>
-					<div class="view image-light" style="position:absolute;">
-						<img src="images/a7.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids image-show" style="position:relative;" >
-					<div class="image-class" style="display:none">点击报名</div>
-					<div class="view image-light" style="position:absolute;">
-						<img src="images/a8.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids image-show" style="position:relative;" >
-					<div class="image-class" style="display:none">点击报名</div>
-					<div class="view image-light" style="position:absolute;">
-						<img src="images/z1.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z3.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z4.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z5.jpg" alt=""/>
-					</div>
-				</div>
-
-
-
-
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z6.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z7.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z8.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z9.jpg" alt=""/>
-					</div>
-				</div><div class="col-sm-4 col-xs-6 gallry-agile-grids">
-				<div class="view">
-					<img src="images/z10.jpg" alt=""/>
-				</div>
-			</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z11.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z12.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z13.jpg" alt=""/>
-					</div>
-				</div><div class="col-sm-4 col-xs-6 gallry-agile-grids">
-				<div class="view">
-					<img src="images/z14.jpg" alt=""/>
-				</div>
-			</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z15.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z16.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z17.jpg" alt=""/>
-					</div>
-				</div><div class="col-sm-4 col-xs-6 gallry-agile-grids">
-				<div class="view">
-					<img src="images/z18.jpg" alt=""/>
-				</div>
-			</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z19.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z20.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z21.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z22.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z23.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z24.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z25.jpg" alt=""/>
-					</div>
-				</div>
-
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z26.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z27.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z28.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z29.jpg" alt=""/>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-6 gallry-agile-grids">
-					<div class="view">
-						<img src="images/z30.jpg" alt=""/>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //gallery -->
-	<!-- Stats -->
-	<div id="stats1" class="stats services news-w3layouts jarallax">
-		<div class="container">    
-			<div class="stats-agileinfo agileits-w3layouts">
-				<div class="col-sm-3 col-xs-6 stats-grid">
-					<div class="stats-img">
-						<i class="fa fa-users" aria-hidden="true"></i>
-					</div>
-					<h6>累计参展用户</h6>
-					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='50000' data-delay='.5' data-increment="100">50000+</div>
-				</div>
-				<div class="col-sm-3 col-xs-6 stats-grid">
-					<div class="stats-img w3-agileits">
-						<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-					</div>
-					<h6>日均栏目听众</h6>
-					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='80000' data-delay='.7' data-increment="1">80000+</div>
-				</div>
-				<div class="col-sm-3 col-xs-6 stats-grid">
-					<div class="stats-img w3-agileits">
-						<i class="fa fa-briefcase" aria-hidden="true"></i>
-					</div>	
-					<h6>历史订单量</h6>
-					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='20000' data-delay='.5' data-increment="10">20000+</div>
-				</div>
-				<div class="col-sm-3 col-xs-6 stats-grid">
-					<div class="stats-img w3-agileits">
-						<i class="fa fa-trophy" aria-hidden="true"></i>
-					</div>
-					<h6>累计合作平台</h6>
-					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='4000' data-delay='.6' data-increment="1">4000+</div>
-				</div>
-				<div class="clearfix"></div>
-			</div> 
-			<!-- Progressive-Effects-Animation-JavaScript -->  
-			<script type="text/javascript" src="js/numscroller-1.0.js"></script>
-			<!-- //Progressive-Effects-Animation-JavaScript -->
-		</div>
-	</div>
-	<!-- //Stats -->   
-	<!-- blog -->
-	<div id="blog" class="blog gallery">
-		<div style="width:100%" >
-			<h3 class="agileits-title" style="padding-left:266.6px;">电台主播带你砍价<span class="w3lshr-line"> </span></h3>
-			<div style="width:100%;">
-				<div class="blog-agileinfo" style="width:100%;background-image:url('images/ditu.jpg');background-repeat:no-repeat;;">
-					<div class="col-md-7" style="padding-left:300px;">
-						<img src="images/xiaobei.jpg" height="400" width="400">
-					</div>
-					<div style="height:100%;margin-top:40px;">
-						<p span style="font-family: 'Microsoft JhengHei';font-size:30px;color:#FF6633;padding-top:40px;">《城市私家车》</p>
-						<p><span style="font-family: 'Microsoft JhengHei';font-size:25px;">主持人</span> <span style="font-family: 'Microsoft JhengHei';font-size:28px;color:#FFCC33"> 晓北</span></p>
-						<p style="font-family: 'Microsoft JhengHei';font-size:20px;color:#FF6633;padding-top:20px;padding-right:100px;">《城市私家车》是一档服务于私家车主生活,提供全方位车房服务的热线
-							直播节目,做到投诉提供帮助,咨询给出解答。汽车行业:受理私家车主汽车投诉,买车、修车、二手车评估.房产行业:买房、卖房、房
-							产投资,帮助解决相关责任和法律问题.</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-
-
-			<div style="width:100%">
-				<div class="blog-agileinfo" style="width:100%;background-image:url('images/ditu.jpg');background-repeat:no-repeat;">
-					<div class="col-md-7" style="padding-left:300px;">
-						<img src="images/laocheng.jpg" height="400" width="400">
-					</div>
-					<div style="margin-top:40px;">
-						<p span style="font-family: 'Microsoft JhengHei';font-size:30px;color:#FF6633;padding-top:40px">《买车找老陈》</p>
-						<p><span style="font-family: 'Microsoft JhengHei';font-size:25px;">主持人</span> <span style="font-family: 'Microsoft JhengHei';font-size:25px;color:#FFCC33"> 老陈</span></p>
-						<p style="font-family: 'Microsoft JhengHei';font-size:20px;color:#FF6633;padding-top:20px;padding-right:100px;">
-							《买车找老陈》一档汽车服务类节目，以购车、用车生活为主，解答
-							来自私家车主的购车、用车问题，节目时间：周一至周五，每天下午
-							15 点半-16 点，每期节目 3-5 分钟，每天一次。</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<!-- contact -->
-	<!-- subscribe -->
-	<div id="lianxi2" class="subscribe-agileinfo services jarallax">
-		<!--<div class="container">-->
-			<!--<h4>Subscribe Our Newsletter</h4>-->
-			<!--<form action="#" method="post">-->
-				<!--<input type="email" name="email" placeholder="Enter your Email..." required="">-->
-				<!--<input type="submit" value="Submit">-->
-				<!--<div class="clearfix"> </div>-->
-			<!--</form> -->
-		<!--</div>  -->
-		<h4>交通指南</h4>
-	</div>
-	<!-- //subscribe --> 
-	<!-- copy rights start here -->
-	<div class="" style="width:100%;height:920px;">
-			<div style="float:left;padding-left:250px;padding-top:130px;">
-				<ul>
-					<li><h4 style="color:black;font-size:30px">地址一:城西板块西溪印象城</h4></li>
-					<li style="padding-top:30px;list-style-type:none"><iframe src="xixiMap.html" width="500" height="300" frameborder="0" scrolling="no"></iframe></li>
-					<li><h4 style="color:black;font-size:30px;margin-top:40px;">地址二:城东板块下沙龙湖天街</h4></li>
-					<li style="padding-top:30px;list-style-type:none"><iframe src="chengdongMap.html" width="500" height="300" frameborder="0" scrolling="no"></iframe></li>
-				</ul>
-			</div>
-				<div style="float:left;;padding-left:200px;padding-top:230px;">
-					<ul>
-						<li style="color:black;font-size:20px;font-family: 'STHupo'">自驾或的士定位:<span style="color:black;font-size:20px;font-family: 'Microsoft YaHei'">余杭市五常大道1号</span></li>
-						<li style="color:black;font-size:20px;font-family: 'STHupo';padding-top:20px;">地铁:<span style="color:black;font-size:20px;font-family: 'Microsoft YaHei'">可乘坐地铁1号线,经过4站, 到达武林广场站后转265a,经过5站, 到达留下北站</span></li>
-						<li style="color:black;font-size:20px;font-family: 'STHupo';padding-top:20px;">公交站名:留下 - 公交站</li>
-						<li style="color:black;font-size:20px;font-family: 'STHupo';list-style-type:none">途径公交车:<span style="color:black;font-size:20px;font-family: 'Microsoft YaHei'">36路;193b线;213路;213路区间;306路;310路;346路;367路;</span></li>
-						<li style="color:black;font-size:20px;font-family: 'Microsoft YaHei';list-style-type:none">382路;1408路;b支7a线;b支7b线;b支7路</li>
-						<li style="color:black;font-size:20px;font-family: 'STHupo';padding-top:240px;">自驾或的士定位:<span style="color:black;font-size:20px;font-family: 'Microsoft YaHei'">龙湖时代金沙天街</span></li>
-						<li style="color:black;font-size:20px;font-family: 'STHupo';padding-top:20px;">地铁:<span style="color:black;font-size:20px;font-family: 'Microsoft YaHei'">地铁一号线下沙江滨方向坐到金沙湖站下车</span></li>
-						<li style="color:black;font-size:20px;font-family: 'STHupo';padding-top:20px;">公交站名:金沙大道银沙路口 - 公交站</li>
-						<li style="color:black;font-size:20px;font-family: 'STHupo';list-style-type:none">途径公交车:<span style="color:black;font-size:20px;font-family: 'Microsoft YaHei'">74路;210路;328路;383路;384路</span></li>
-
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav navbar-right cl-effect-15">
+						<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+						<li><a class="page-scroll" href="#stats" data-hover="往期回顾">往期回顾</a></li>
+						<li><a class="page-scroll" href="#gallery" data-hover="参展品牌">参展品牌</a></li>
+						<li><a class="page-scroll" href="#blog" data-hover="主播介绍">主播介绍</a></li>
+						<li><a class="page-scroll" href="#lianxi" data-hover="交通指南">交通指南</a></li>
 					</ul>
 				</div>
-			<!--<div style="float:left;margin-left:100px;">-->
-				<!--<ul>-->
-					<!--<li style="color:yellow;">地址二:城东板块下沙龙湖天街(地铁一号线下沙江滨方向坐到金沙湖站下车)</li>-->
-					<!--<iframe src="chengdongMap.html" width="500" height="300" frameborder="0" scrolling="no"></iframe>-->
-				<!--</ul>-->
-			<!--</div>-->
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container -->
+		</nav>
 	</div>
-	<div style="width:100%;height:150px;background:black;padding-top:30px;color:yellow">
-		<div id="lianxi" class="subscribe-agileinfo">
-			<h4 style="font-size:25px;">联系我们</h4>
-			<div style="color:white;font-size:20px;font-family: 'Microsoft YaHei';float:left;padding-left:700px">活动热线:96107</div>
-			<div style="color:white;font-size:20px;font-family: 'Microsoft YaHei';float:left;padding-left:200px;padding-bottom:30px;">微信公众号:FM107107回复【车展】</div>
-		</div>
-
-		<div class="login_from div-center" id="show-from" style="display:none">
+	<div class="myStyle" >
+		<div class="login_from">
 			<div style="background:black; background-size: 100%;margin-top:30px;"><h5 style="font-family: 'Microsoft JhengHei';font-size:40px;text-align:center;color: #FF6600;">火速报名!</h5></div>
 			<div style="margin-left:30px">
-				<form action="/car?m=reg" method="post">
-					<input type="text" class="name" name="user name" style="height:40px;margin-top:25px;width:300px;background:rgba(0,0,0,0.1);color:yellow;" required="" placeholder="请输入姓名"/>
-					<input type="text" class="phone" name="phone" style="height:40px;width:300px;margin-top:25px;color:yellow;background:rgba(0,0,0,0.1);" required="" placeholder="请输入联系方式"/>
-					<input type="text" class="password" name="password" style="height:40px;width:300px;margin-top:25px;color:yellow;background:rgba(0,0,0,0.1);" required="" placeholder="请输入意向车型"/>
-					<select class="select" style="margin-top:25px;background:#C0C0C0;">
+				<form action="/car?m=reg" method="post" id="dataForm">
+					<input type="text" class="name" name="userName" id="userName" style="height:40px;margin-top:25px;width:300px;background:rgba(0,0,0,0.1);color:yellow;" required="" placeholder="请输入姓名"/>
+					<input type="text" class="phone" name="phone" onKeyUp="value=value.replace(/[^\d]/g,'')" id="phone" style="height:40px;width:300px;margin-top:25px;color:yellow;background:rgba(0,0,0,0.1);" required="" placeholder="请输入联系方式(只能输入数字)"/>
+					<input type="text" class="password" name="carType" id="carType" style="height:40px;width:300px;margin-top:25px;color:yellow;background:rgba(0,0,0,0.1);" required="" placeholder="请输入意向车型"/>
+					<select class="select" style="margin-top:25px;background:#C0C0C0;" name="zone" id="zone">
 						<option value ="">请选择参展区域</option>
 						<option value ="下沙龙湖天街"><p style="color:black;">下沙龙湖天街</p></option>
 						<option value="西溪印象城">西溪印象城</option>
 					</select>
-					<div style="width:50px;margin-top:30px;margin-left:30px;"><input type="button"  value="马上报名" id="button2"></div>
+					<div style="width:50px;margin-top:30px;margin-left:30px;"><input type="button" value="马上报名" id="button1" onclick="submitForm()"></div>
 				</form>
 			</div>
+		</div>
+		<!--<div  style="margin-top:165px;float:right;">-->
+		<!--<div id="register" class="login-form agileits-right">-->
+		<!---->
+		<!--</div>-->
+	</div>
+</div>
+</div>
+<!-- //banner -->
+</div>
+<!-- //about -->
+<!-- features -->
+<!-- //features -->
+<!-- services -->
+<div class="services jarallax" id="stats">
+	<h3 class="agileits-title" style="margin-left: 40px;">往期回顾<span class="w3lshr-line"> </span></h3>
+	<p style="margin-left: 40px;color: #ffc107;font-family: 'Microsoft JhengHei';text-transform: capitalize;font-size:20px;">私家车107·城市之声，全国首家私家车电台、中国私家车广播领跑者，长期深耕汽车行业。</p>
+	<p style="margin-left: 40px;color: #ffc107;font-family: 'Microsoft JhengHei';text-transform: capitalize;font-size:20px;">自2008年以来，城市之声全面整合社会资源、汽车产业资源、汽车销售及后服务资源、全媒体宣传资源等，</p>
+	<p style="margin-left: 40px;color: #ffc107;font-family: 'Microsoft JhengHei';text-transform: capitalize;font-size:20px;">“107悦车会”车展已累计与数百家汽车经销商合作，服务上<span style="color:red">万</span>名消费者，累计为消费者节省上千万购车款。</p>
+	<div class="container">
+		<div class="w3ls_banner_bottom_grids">
+			<ul class="">
+				<div class="w3_grid_effect">
+					<div class="col-sm-19 col-xs-6 gallry-agile-grids">
+						<div class="view">
+							<img src="images/q1.jpg" alt=""/>
+						</div>
+					</div>
+
+					<div class="col-sm-19 col-xs-6 gallry-agile-grids">
+						<div class="view">
+							<img src="images/q2.jpg" alt=""/>
+						</div>
+					</div>
+					<div class="col-sm-19 col-xs-6 gallry-agile-grids">
+						<div class="view">
+							<img src="images/q4.jpg" alt=""/>
+						</div>
+					</div>
+				</div>
+			</ul>
+			<div class="clearfix"> </div>
+		</div>
+		<div>
+
+		</div>
+	</div>
+</div>
+<!-- //services -->
+<!-- gallery -->
+<div id="gallery" class="gallery">
+	<div class="container">
+		<h3 class="agileits-title">参展品牌<span class="w3lshr-line"> </span></h3>
+		<div class="main">
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img  src="images/g1.jpg"alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/g2.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/g3.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/g7.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/g8.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/g9.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/q11.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/q14.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/a1.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/a2.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/a3.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/a4.jpg" alt=""/>
+				</div>
+			</div>
+
+
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/a5.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/a6.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/a7.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/a8.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z1.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z3.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z4.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z5.jpg" alt=""/>
+				</div>
+			</div>
+
+
+
+
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z6.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z7.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z8.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z9.jpg" alt=""/>
+				</div>
+			</div><div class="col-sm-4 col-xs-6 gallry-agile-grids">
+			<div class="view">
+				<img src="images/z10.jpg" alt=""/>
+			</div>
+		</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z11.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z12.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z13.jpg" alt=""/>
+				</div>
+			</div><div class="col-sm-4 col-xs-6 gallry-agile-grids">
+			<div class="view">
+				<img src="images/z14.jpg" alt=""/>
+			</div>
+		</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z15.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z16.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z17.jpg" alt=""/>
+				</div>
+			</div><div class="col-sm-4 col-xs-6 gallry-agile-grids">
+			<div class="view">
+				<img src="images/z18.jpg" alt=""/>
+			</div>
+		</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z19.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z20.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z21.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z22.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z23.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z24.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z25.jpg" alt=""/>
+				</div>
+			</div>
+
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z26.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z27.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z28.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z29.jpg" alt=""/>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-6 gallry-agile-grids">
+				<div class="view">
+					<img src="images/z30.jpg" alt=""/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //gallery -->
+<!-- Stats -->
+<div id="stats1" class="stats services news-w3layouts jarallax">
+	<div class="container">
+		<div class="stats-agileinfo agileits-w3layouts">
+			<div class="col-sm-3 col-xs-6 stats-grid">
+				<div class="stats-img">
+					<i class="fa fa-users" aria-hidden="true"></i>
+				</div>
+				<h6>累计参展用户</h6>
+				<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='50000' data-delay='.5' data-increment="100">50000+</div>
+			</div>
+			<div class="col-sm-3 col-xs-6 stats-grid">
+				<div class="stats-img w3-agileits">
+					<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+				</div>
+				<h6>日均栏目听众</h6>
+				<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='80000' data-delay='.7' data-increment="1">80000+</div>
+			</div>
+			<div class="col-sm-3 col-xs-6 stats-grid">
+				<div class="stats-img w3-agileits">
+					<i class="fa fa-briefcase" aria-hidden="true"></i>
+				</div>
+				<h6>历史订单量</h6>
+				<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='20000' data-delay='.5' data-increment="10">20000+</div>
+			</div>
+			<div class="col-sm-3 col-xs-6 stats-grid">
+				<div class="stats-img w3-agileits">
+					<i class="fa fa-trophy" aria-hidden="true"></i>
+				</div>
+				<h6>累计合作平台</h6>
+				<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='4000' data-delay='.6' data-increment="1">4000+</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<!-- Progressive-Effects-Animation-JavaScript -->
+		<script type="text/javascript" src="js/numscroller-1.0.js"></script>
+		<!-- //Progressive-Effects-Animation-JavaScript -->
+	</div>
+</div>
+<!-- //Stats -->
+<!-- blog -->
+<div id="blog" class="blog gallery">
+	<div style="width:100%" >
+		<h3 class="agileits-title" style="padding-left:266.6px;">电台主播带你砍价<span class="w3lshr-line"> </span></h3>
+		<div style="width:100%;">
+			<div class="blog-agileinfo" style="width:100%;background-image:url('images/ditu.jpg');background-repeat:no-repeat;;">
+				<div class="col-md-7" style="padding-left:300px;">
+					<img src="images/xiaobei.jpg" height="400" width="400">
+				</div>
+				<div style="height:100%;margin-top:40px;">
+					<p span style="font-family: 'Microsoft JhengHei';font-size:30px;color:#FF6633;padding-top:40px;">《城市私家车》</p>
+					<p><span style="font-family: 'Microsoft JhengHei';font-size:25px;">主持人</span> <span style="font-family: 'Microsoft JhengHei';font-size:28px;color:#FFCC33"> 晓北</span></p>
+					<p style="font-family: 'Microsoft JhengHei';font-size:20px;color:#FF6633;padding-top:20px;padding-right:100px;">《城市私家车》是一档服务于私家车主生活,提供全方位车房服务的热线
+						直播节目,做到投诉提供帮助,咨询给出解答。汽车行业:受理私家车主汽车投诉,买车、修车、二手车评估.房产行业:买房、卖房、房
+						产投资,帮助解决相关责任和法律问题.</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+
+
+		<div style="width:100%">
+			<div class="blog-agileinfo" style="width:100%;background-image:url('images/ditu.jpg');background-repeat:no-repeat;">
+				<div class="col-md-7" style="padding-left:300px;">
+					<img src="images/laocheng.jpg" height="400" width="400">
+				</div>
+				<div style="margin-top:40px;">
+					<p span style="font-family: 'Microsoft JhengHei';font-size:30px;color:#FF6633;padding-top:40px">《买车找老陈》</p>
+					<p><span style="font-family: 'Microsoft JhengHei';font-size:25px;">主持人</span> <span style="font-family: 'Microsoft JhengHei';font-size:25px;color:#FFCC33"> 老陈</span></p>
+					<p style="font-family: 'Microsoft JhengHei';font-size:20px;color:#FF6633;padding-top:20px;padding-right:100px;">
+						《买车找老陈》一档汽车服务类节目，以购车、用车生活为主，解答
+						来自私家车主的购车、用车问题，节目时间：周一至周五，每天下午
+						15 点半-16 点，每期节目 3-5 分钟，每天一次。</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- contact -->
+<!-- subscribe -->
+<div id="lianxi2" class="subscribe-agileinfo services jarallax">
+	<!--<div class="container">-->
+	<!--<h4>Subscribe Our Newsletter</h4>-->
+	<!--<form action="#" method="post">-->
+	<!--<input type="email" name="email" placeholder="Enter your Email..." required="">-->
+	<!--<input type="submit" value="Submit">-->
+	<!--<div class="clearfix"> </div>-->
+	<!--</form> -->
+	<!--</div>  -->
+	<h4>交通指南</h4>
+</div>
+<!-- //subscribe -->
+<!-- copy rights start here -->
+<div class="" style="width:100%;height:920px;">
+	<div style="float:left;padding-left:250px;padding-top:130px;">
+		<ul>
+			<li><h4 style="color:black;font-size:30px">地址一:城西板块西溪印象城</h4></li>
+			<li style="padding-top:30px;list-style-type:none"><iframe src="xixiMap.html" width="500" height="300" frameborder="0" scrolling="no"></iframe></li>
+			<li><h4 style="color:black;font-size:30px;margin-top:40px;">地址二:城东板块下沙龙湖天街</h4></li>
+			<li style="padding-top:30px;list-style-type:none"><iframe src="chengdongMap.html" width="500" height="300" frameborder="0" scrolling="no"></iframe></li>
+		</ul>
+	</div>
+	<div style="float:left;;padding-left:200px;padding-top:230px;">
+		<ul>
+			<li style="color:black;font-size:20px;font-family: 'STHupo'">自驾或的士定位:<span style="color:black;font-size:20px;font-family: 'Microsoft YaHei'">余杭市五常大道1号</span></li>
+			<li style="color:black;font-size:20px;font-family: 'STHupo';padding-top:20px;">地铁:<span style="color:black;font-size:20px;font-family: 'Microsoft YaHei'">可乘坐地铁1号线,经过4站, 到达武林广场站后转265a,经过5站, 到达留下北站</span></li>
+			<li style="color:black;font-size:20px;font-family: 'STHupo';padding-top:20px;">公交站名:留下 - 公交站</li>
+			<li style="color:black;font-size:20px;font-family: 'STHupo';list-style-type:none">途径公交车:<span style="color:black;font-size:20px;font-family: 'Microsoft YaHei'">36路;193b线;213路;213路区间;306路;310路;346路;367路;</span></li>
+			<li style="color:black;font-size:20px;font-family: 'Microsoft YaHei';list-style-type:none">382路;1408路;b支7a线;b支7b线;b支7路</li>
+			<li style="color:black;font-size:20px;font-family: 'STHupo';padding-top:240px;">自驾或的士定位:<span style="color:black;font-size:20px;font-family: 'Microsoft YaHei'">龙湖时代金沙天街</span></li>
+			<li style="color:black;font-size:20px;font-family: 'STHupo';padding-top:20px;">地铁:<span style="color:black;font-size:20px;font-family: 'Microsoft YaHei'">地铁一号线下沙江滨方向坐到金沙湖站下车</span></li>
+			<li style="color:black;font-size:20px;font-family: 'STHupo';padding-top:20px;">公交站名:金沙大道银沙路口 - 公交站</li>
+			<li style="color:black;font-size:20px;font-family: 'STHupo';list-style-type:none">途径公交车:<span style="color:black;font-size:20px;font-family: 'Microsoft YaHei'">74路;210路;328路;383路;384路</span></li>
+
+		</ul>
+	</div>
+	<!--<div style="float:left;margin-left:100px;">-->
+	<!--<ul>-->
+	<!--<li style="color:yellow;">地址二:城东板块下沙龙湖天街(地铁一号线下沙江滨方向坐到金沙湖站下车)</li>-->
+	<!--<iframe src="chengdongMap.html" width="500" height="300" frameborder="0" scrolling="no"></iframe>-->
+	<!--</ul>-->
+	<!--</div>-->
+</div>
+<div style="width:100%;height:150px;background:black;padding-top:30px;color:yellow">
+	<div id="lianxi" class="subscribe-agileinfo">
+		<h4 style="font-size:25px;">联系我们</h4>
+		<div style="color:white;font-size:20px;font-family: 'Microsoft YaHei';float:left;padding-left:700px">活动热线:96107</div>
+		<div style="color:white;font-size:20px;font-family: 'Microsoft YaHei';float:left;padding-left:200px;padding-bottom:30px;">微信公众号:FM107107回复【车展】</div>
 	</div>
 
-	<!-- //modal --> 
-	<!-- timer scripts --> 
+	<div class="login_from div-center" id="show-from" style="display:none">
+		<span class="close-div"  onclick="closeDiv()"></span>
+		<div style="background:black; background-size: 100%;margin-top:30px;"><h5 style="font-family: 'Microsoft JhengHei';font-size:40px;text-align:center;color: #FF6600;">火速报名!</h5></div>
+		<div style="margin-left:30px">
+			<form action="/car?m=reg" method="post">
+				<input type="text" class="name" name="user name" style="height:40px;margin-top:25px;width:300px;background:rgba(0,0,0,0.1);color:yellow;" required="" placeholder="请输入姓名"/>
+				<input type="text" class="phone" name="phone" onKeyUp="value=value.replace(/[^\d]/g,'')" style="height:40px;width:300px;margin-top:25px;color:yellow;background:rgba(0,0,0,0.1);" required="" placeholder="(只能输入数字)"/>
+				<input type="text" class="password" name="password" style="height:40px;width:300px;margin-top:25px;color:yellow;background:rgba(0,0,0,0.1);" required="" placeholder="请输入意向车型"/>
+				<select class="select" style="margin-top:25px;background:#C0C0C0;">
+					<option value ="">请选择参展区域</option>
+					<option value ="下沙龙湖天街"><p style="color:black;">下沙龙湖天街</p></option>
+					<option value="西溪印象城">西溪印象城</option>
+				</select>
+				<div style="width:50px;margin-top:30px;margin-left:30px;"><input type="button"  value="马上报名" id="button2" onclick="submitForm2()"></div>
+			</form>
+		</div>
+	</div>
+
+	<!-- //modal -->
+	<!-- timer scripts -->
 	<script type="text/javascript" src=" js/moment.js"></script>
 	<script type="text/javascript" src=" js/moment-timezone-with-data.js"></script>
 	<script type="text/javascript" src="js/timer.js"></script>
 	<!-- //timer scripts -->
-	<!-- start-smooth-scrolling --> 
+	<!-- start-smooth-scrolling -->
 	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>	
+	<script type="text/javascript" src="js/easing.js"></script>
 	<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-			
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
 
-			$("#box1").hover(function(){
-         		$("#box2").show();
-			},function(){
-         		$("#box2").hide();
-			})
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
 
-			$(".image-show").mouseover(function(){
-			$(this).find("div").eq(0).show();
-			});
-			 $(".image-show").mouseout(function(){
-			console.log();
-			$(this).find("div").eq(0).hide();
-			});
-			$(".image-show").click(function(){
-			console.log();
-			$("#show-from").show();
-			});
+        $("#box1").hover(function(){
+            $("#box2").show();
+        },function(){
+            $("#box2").hide();
+        })
 
+        $(".image-show").mouseover(function(){
+            $(this).find("div").eq(0).show();
+        });
+        $(".image-show").mouseout(function(){
+            console.log();
+            $(this).find("div").eq(0).hide();
+        });
+        $(".image-show").click(function(){
+            console.log();
+            $("#show-from").show();
+        });
 
 	</script>
-	<!-- //end-smooth-scrolling -->	 
+	<!-- //end-smooth-scrolling -->
 	<!-- smooth-scrolling-of-move-up -->
 	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-			};
-			*/
-			
-			$().UItoTop({ easingType: 'easeOutQuart' });
-			
-		});
-		window.onload = function(){
-    var myTab = document.getElementById("tab");    //整个div
-    var myUl = myTab.getElementsByTagName("ul")[0];//一个节点
-    var myLi = myUl.getElementsByTagName("li");    //数组
-    var myDiv = myTab.getElementsByTagName("div"); //数组
+        $(document).ready(function() {
+            /*
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            };
+            */
 
-    for(var i = 0; i<myLi.length;i++){
-        myLi[i].index = i;
-        myLi[i].onclick = function(){
-            for(var j = 0; j < myLi.length; j++){
-                myLi[j].className="off";
-                myDiv[j].className = "hide";
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+        window.onload = function(){
+            var myTab = document.getElementById("tab");    //整个div
+            var myUl = myTab.getElementsByTagName("ul")[0];//一个节点
+            var myLi = myUl.getElementsByTagName("li");    //数组
+            var myDiv = myTab.getElementsByTagName("div"); //数组
+
+            for(var i = 0; i<myLi.length;i++){
+                myLi[i].index = i;
+                myLi[i].onclick = function(){
+                    for(var j = 0; j < myLi.length; j++){
+                        myLi[j].className="off";
+                        myDiv[j].className = "hide";
+                    }
+                    this.className = "on";
+                    myDiv[this.index].className = "show";
+                }
             }
-            this.className = "on";
-            myDiv[this.index].className = "show";
         }
-      }
-    }
 	</script>
-	<!-- //smooth-scrolling-of-move-up -->   
-	<!-- Scrolling Nav JavaScript --> 
-    <script src="js/scrolling-nav.js"></script>  
-	<!-- //fixed-scroll-nav-js -->  
-	<!-- bth hover effect --> 
+	<!-- //smooth-scrolling-of-move-up -->
+	<!-- Scrolling Nav JavaScript -->
+	<script src="js/scrolling-nav.js"></script>
+	<!-- //fixed-scroll-nav-js -->
+	<!-- bth hover effect -->
 	<script>
 
-	$(function() {
-		$('.btn-6')
-		.on('mouseenter', function(e) {
-			var parentOffset = $(this).offset(),
-			relX = e.pageX - parentOffset.left,
-			relY = e.pageY - parentOffset.top;
-		  $(this).find('span').css({
-			top: relY,
-			left: relX
-		  })
-		})
-		.on('mouseout', function(e) {
-		  var parentOffset = $(this).offset(),
-			relX = e.pageX - parentOffset.left,
-			relY = e.pageY - parentOffset.top;
-		  $(this).find('.btn-6 span').css({
-			top: relY,
-			left: relX
-		  })
-		}); 
-	});
-	</script>	
-	<!-- //bth hover effect --> 
+        $(function() {
+            $('.btn-6')
+                .on('mouseenter', function(e) {
+                    var parentOffset = $(this).offset(),
+                        relX = e.pageX - parentOffset.left,
+                        relY = e.pageY - parentOffset.top;
+                    $(this).find('span').css({
+                        top: relY,
+                        left: relX
+                    })
+                })
+                .on('mouseout', function(e) {
+                    var parentOffset = $(this).offset(),
+                        relX = e.pageX - parentOffset.left,
+                        relY = e.pageY - parentOffset.top;
+                    $(this).find('.btn-6 span').css({
+                        top: relY,
+                        left: relX
+                    })
+                });
+        });
+	</script>
+	<!-- //bth hover effect -->
 	<!-- jarallax -->
 	<script src="js/jarallax.js"></script>
 	<script src="js/SmoothScroll.min.js"></script>
 	<script type="text/javascript">
-		/* init Jarallax */
-		$('.jarallax').jarallax({
-			speed: 0.5,
-			imgWidth: 1366,
-			imgHeight: 768
-		})
+        /* init Jarallax */
+        $('.jarallax').jarallax({
+            speed: 0.5,
+            imgWidth: 1366,
+            imgHeight: 768
+        })
 	</script>
-	<!-- //jarallax -->   
-	<!-- FlexSlider --> 
+	<!-- //jarallax -->
+	<!-- FlexSlider -->
 	<script defer src="js/jquery.flexslider.js"></script>
 	<script type="text/javascript">
-		$(window).load(function(){
-		  $('.flexslider').flexslider({
-			animation: "slide",
-			start: function(slider){
-			  $('body').removeClass('loading');
-			}
-		  });
-		});
-		
-		
-		
-		function submitForm(){
-			   $("#dataForm").ajaxSubmit({
-                success: function (da) {
-					if(da=="ok"){
-                        $("#dataForm").trigger("reset");
-                        alert("恭喜您已报名成功！");
-                    }
-					else
-					 alert("保存出错");
+        $(window).load(function(){
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function(slider){
+                    $('body').removeClass('loading');
                 }
             });
-		}
+        });
+
+        function closeDiv(){
+            $("#show-from").hide();
+        }
+
+        function submitForm(){
+            var userName = $("#userName").val();
+            var phone = $("#phone").val();
+            var carType = $("#carType").val();
+            var zone = $("#zone option:selected").val()
+            if(userName==""||userName==null||userName==undefined){
+                $("#userName").css("border-color","red")
+                alert("请输入姓名")
+                return;
+            }
+            if(phone==""||phone==null||phone==undefined){
+                alert("请输入手机号")
+                $("#phone").css("border-color","red")
+                return;
+            }
+            if(carType==""||carType==null||carType==undefined){
+                alert("请输入意向车型")
+                $("#carType").css("border-color","red")
+                return;
+            }
+            if(zone==""||zone==null||zone==undefined){
+                alert("请选择参展区域")
+                $("#zone").css("border-color","red")
+                return;
+            }
+            $("#dataForm").ajaxSubmit({
+                success: function (da) {
+                    if(da=="ok"){
+                        $("#dataForm").trigger("reset");
+                        alert("恭喜您报名成功！");
+                    }
+
+                    else
+                        alert("保存出错");
+                }
+            });
+        }
 	</script>
-	<!-- //End-FlexSlider -->  
+	<!-- //End-FlexSlider -->
 	<!-- pop-up-script -->
 	<script src="js/jquery.chocolat.js"></script>
 	<script type="text/javascript">
-	$(function() {
-		$('.view-seventh a').Chocolat();
-	});
+        $(function() {
+            $('.view-seventh a').Chocolat();
+        });
 	</script>
-	<!-- //pop-up-script -->  
+	<!-- //pop-up-script -->
 	<!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/bootstrap.js"></script>
-	
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="js/bootstrap.js"></script>
+
 </body>
 
 </html>

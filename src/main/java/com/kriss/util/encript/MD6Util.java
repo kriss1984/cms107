@@ -43,7 +43,6 @@ public class MD6Util {
     public static void main(String args[]) {
         System.out.println(MD6Util.MD6("gly201803"));
         System.out.println(MD6Util.MD6Equal("y55ec15f691fa6e04b62226d2243608b", "zjdt107"));
-
     }
 
 }

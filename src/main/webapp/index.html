@@ -74,7 +74,7 @@
             <div class="col-md-12 top-nav">
                 <ul class="nav1">
                     <li ><a href="plugin/player/index.html" style="background-color:#F90">节目回顾</a></li>
-                    <li><a href="http://site.wsyvip.com/newslist.php?cid=8756&listid=3&sid=294&weixinname=" style="background-color:#F6C"">活动花絮</a></li>
+                    <li><a href="http://site.wsyvip.com/newslist.php?cid=8756&listid=3&sid=294&weixinname=" style="background-color:#F6C">活动花絮</a></li>
                     <li><a href="#regist" style="background-color:#6C0" onclick="changeTitle('我要装修')">我要装修</a></li>
                     <li><a href="#regist" style="background-color:#09C" onclick="changeTitle('我要建材')">我要建材</a></li>
                     <li><a href="#hot" style="background-color:#F33" >阿亮爆款</a></li>
@@ -82,7 +82,7 @@
             </div>
        
 			<div class="header-logo">
-				<a href="index.html"><img src="images/logo2.png" alt="logo" /></a>
+				<a href="index.html"><img src="images/logo3.png" alt="logo" /></a>
 			</div>	
 			
             
@@ -116,7 +116,7 @@
 			<h3 id="regist" style="padding-top:40px;padding-bottom:40px;color:white"><tx>我要装修</tx>-报名机会抢占通道</h3>
 			<div class="services-grids" style="background-image:url(images/head_bg.jpg);padding:20px 10px" >
 				
-                <form class="layui-form" action="/biz?m=reg" id="registForm" method="post">
+                <form class="layui-form" action="http://zjdt107.gotoip2.com/biz?m=reg" id="registForm" method="post">
 				
 				    <div class="row">
 						<div class="col-md-6">
@@ -179,13 +179,8 @@
 							  </div>
 						</div>
 				 </div>
-				
-				
-		
-                      
-					
                       <div class="layui-form-item">
-                          <a class="layui-btn" onclick="submitData()">立即报名</a>   
+                          <a class="layui-btn" onclick="submitData()" id="sbBtn">立即报名</a>
                       </div>
                     </form>
                     <script>
@@ -201,28 +196,24 @@
 									return false;
 								}
 							});
-							
-							
 							if(flag){
 								return false;
-								}
+							}
 
 							$("#registForm").ajaxSubmit({
-								dataType:"json",
-								beforeSend:function(){
-                                    layui.use(['form','layer'], function () {
-                                        layer.msg("請稍後，提交中...");
-                                    });
-								},
-								success:function(da){
-                                    layui.use(['form','layer'], function () {
-                                        layer.msg("提交成功！");
-                                    });
-                                    $("#registForm").trigger("reset");
-								}
+								dataType:"jsonp",
+                                jsonpCallback: "showData"
 							});
-							return false;
 
+                            layui.use(['form','layer'], function () {
+                                $("#registForm").trigger("reset");
+                                layer.msg("提交成功！");
+                            });
+							return false;
+							}
+
+							function  showData(data){
+                              console.log(data);
 							}
 						</script>
 					<div class="clearfix"> </div>
@@ -237,9 +228,7 @@
 				<h3 id="hot" style="padding-top:40px;padding-bottom:40px;color:white">阿亮爆款</h3>
 			</div>
 			<div class="blog-bottom" id="brands">
-             <div style="text-align:center;font-size:20px;font-weight:bold;margin-bottom:10px">以下品牌，找阿亮可以拿全省最低价！！！</div>
-				
-				
+             	<div style="text-align:center;font-size:20px;font-weight:bold;margin-bottom:10px">以下品牌，找阿亮可以拿全省最低价！！！</div>
 			</div>
 		</div>
 	</div>

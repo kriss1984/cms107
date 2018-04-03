@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="container body">
     <div class="main_container">
@@ -33,8 +33,12 @@
                             -->
                             <li><a><i class="fa fa-home"></i>客户管理<span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu" style="display: block;">
-                                    <%--<li><a href="/biz?m=regList">客户列表</a></li>--%>
-                                    <li><a href="/biz?m=carRegList">客户列表</a></li>
+                                    <c:if test="${sessionScope.currentUser.userType==107}">
+                                        <li><a href="/biz?m=regList">客户列表</a></li>
+                                    </c:if>
+                                    <c:if test="${sessionScope.currentUser.userType!=107}">
+                                        <li><a href="/biz?m=carRegList">客户列表</a></li>
+                                    </c:if>
                                 </ul>
                             </li>
                         </ul>

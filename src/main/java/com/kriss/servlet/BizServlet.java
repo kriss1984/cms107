@@ -47,7 +47,12 @@ public class BizServlet extends HttpServlet {
            crmRegiste.setRegTime(new Date());
            crmRegiste.setRegSource(alalySource(req));
            bizService.saveReg(crmRegiste);
-           resp.getWriter().write("{\"status\":\"10000\",\"msg\":\"保存成功\"}");
+
+           String callback = req.getParameter("callback");
+           if(callback!=null&&callback.length()>0){
+               resp.getWriter().write(callback+"({\"status\":\"10000\",\"msg\":\"保存成功\"})");
+           }else
+               resp.getWriter().write("{\"status\":\"10000\",\"msg\":\"保存成功\"}");
        }else if("regList".equals(m)){   String pageNo  = req.getParameter("pageNo");
            Pager pager  = new Pager();
            pager.setPage(Integer.parseInt(pageNo==null?"1":pageNo));
